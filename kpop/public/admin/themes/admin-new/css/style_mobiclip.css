@@ -1,0 +1,123 @@
+#header{
+	background: url("../images/mobiclip/header-bg.png") repeat-x;
+    height: 70px;
+    margin: 0;
+	padding: 0;
+}
+#header #logo h1{
+	margin: 0;
+}
+#header #header-inner{
+ 	background: url("../images/mobiclip/toolbar-bg.gif") repeat-x;
+    border-bottom: 1px solid #a6a6a6;
+}
+#user{
+	background-color: #f0edec;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #7a7a7a;
+    float: right;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+ul.menu a{
+	color: #222;
+	text-transform: uppercase;
+}
+ul.menu .menuhover{
+	background: url("../images/mobiclip/toolbar-bg-active.gif") repeat-x;
+}
+#header #header-inner #home a{
+	background: url("../images/mobiclip/toolbar-bg-active.gif") repeat-x;
+}
+ul.menu ul li{
+	border-bottom: 1px solid #beddec;
+}
+ul.menu ul li a{
+	background: #016a77;
+	color: #FFF;
+}
+ul.menu .menulink:hover,
+ul.menu ul li a:hover{
+	background: #13b8c4;
+}
+.toggleButton{
+	background: #9ae4ed;
+	border: 0;
+}
+#content div.title-box{
+  	background: #9ae4ed;
+	border-radius: 0;
+}
+.submenu .page-title{
+	color: #014b6c;
+    font-size: 16px;
+    font-weight: 700;
+}
+.adminform{
+	margin: 0;
+}
+.grid-view table.items th{
+	background: url("../images/mobiclip/grid_th.gif") repeat-x bottom #24d9e4 !important;
+}
+#content #left #menu h6.selected{
+  	background: #2f98c7;
+    border-bottom: 1px solid #dfdfdf;
+	border-radius: 5px 5px 0 0;
+}
+#content #left #menu h6.selected a,
+#content #left #menu h6.selected a span{
+	background: none;
+	font-size: 18px;
+    font-weight: normal;
+}
+#content #left #menu ul,
+#content #left #menu li ul{
+	background: #d5eff3;
+}
+#content #left #menu li ul{
+	border-left: 18px solid #d5eff3;
+}
+#content #left #menu li,
+#content #left #menu li ul li{
+	border-top: 1px dotted #2f98c7;
+	border-bottom: 0;
+}
+#content #left #menu li ul li{
+	background: none;
+}
+#content #left #menu li a,
+#content #left #menu li li a{
+	color: #333;
+	font-weight: 700;
+	text-decoration: none;
+	background: url("../images/mobiclip/bullet_01.png") no-repeat 0 6px;
+}
+#content #left #menu li a:hover{
+	color: #e259ae;
+}
+.submenu ul li a{
+	background: url("../images/mobiclip/btn_bg.gif") repeat-x 0 0;
+    border-color: #cfcfcf;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    color: #fff;
+    display: block;
+    font: bold 12px/15px Arial;
+    padding: 4px 8px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+#content div.title-box a{
+	height: auto;
+	line-height: 100%;
+	padding: 5px 10px !important;
+	font-weight: bold;
+	border: 0;
+	font-size: 13px;
+	margin-top: 3px;
+}
+.submenu ul li a:hover{
+	background: url("../images/mobiclip/btn_over_bg.gif") repeat-x;
+}

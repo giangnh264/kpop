@@ -1,0 +1,46 @@
+.fl {
+    float: left;
+}
+.fr{
+    float: right;
+}
+.margin_auto {
+    margin: 0 auto;
+}
+.color_text {
+    color: #FFF;
+}
+.color_reg {
+    color: #E6CC11;
+    font-weight: bold;
+}
+.color_red{
+    color: #ED1C24;
+}
+.text_center {
+    text-align: center;
+}
+.w25{
+    width: 25%;
+}
+.w35{
+    width: 35%;
+}
+.w15{
+    width: 15%;
+}
+.bg_gray{
+    background-color: #F2F2F2;
+}
+.bg_white{
+    background-color: #FFF;
+}
+.ovh{
+    overflow: hidden;
+}
+.pt15{
+    padding-top: 15px;
+}
+.font_italic{
+    font-style: italic;
+}

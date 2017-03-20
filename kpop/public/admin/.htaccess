@@ -1,0 +1,15 @@
+Options +FollowSymLinks
+#IndexIgnore */*
+RewriteEngine on
+
+# allowed domain list
+# comment bellow rules for local testing
+#RewriteCond %{HTTP_HOST} !^admin\.chacha\.vn [NC]
+#RewriteRule (.*) http://admin.chacha.vn/$1 [L,R]
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule !\.(js|ico|gif|jpe?g|png|css|swf|mp3|wav)$ index.php

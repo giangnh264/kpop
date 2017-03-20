@@ -1,0 +1,173 @@
+#header{
+	background: url("../images/mobiclip/header-bg.png") repeat-x;
+    height: 70px;
+    margin: 0;
+	padding: 0;
+}
+#header #logo h1{
+	margin: 0;
+}
+#header #header-inner{
+ 	background: url("../images/mobiclip/toolbar-bg.gif") repeat-x;
+    border-bottom: 1px solid #a6a6a6;
+}
+#user{
+	background-color: #f0edec;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #7a7a7a;
+    float: right;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+ul.menu a{
+	color: #222;
+	text-transform: uppercase;
+}
+ul.menu .menuhover{
+	background-color: #333;
+}
+#header #header-inner #home a{
+	background: #333 url(../images/home_24.png) no-repeat center center;
+}
+ul.menu ul{
+	box-shadow: 1px 2px 3px #333;
+}
+ul.menu ul li{
+	border-bottom: 1px solid #ccc;
+}
+ul.menu ul li a{
+	background: #F4F4F4;
+	color: #333;
+}
+ul.menu .menulink:hover,
+ul.menu ul li a:hover{
+	background: #333;
+}
+.toggleButton{
+	background: #9ae4ed;
+	border: 0;
+}
+#content div.title-box{
+  	background: #9ae4ed;
+	border-radius: 0;
+}
+.submenu .page-title{
+	color: #014b6c;
+    font-size: 16px;
+    font-weight: 700;
+}
+.adminform{
+	margin: 0;
+}
+.grid-view table.items th{
+	background: url("../images/mobiclip/toolbar-bg.gif") repeat-x bottom #fff !important;
+	border-bottom: 1px solid #A6A6A6!important;
+	color: #333;
+}
+.grid-view table.items th a,.grid-view table.items th a:hover{
+	color: #333;
+}
+.grid-view table.items th a:hover{}
+#content #left #menu h6.selected{
+  	background: #2f98c7;
+    border-bottom: 1px solid #dfdfdf;
+	border-radius: 5px 5px 0 0;
+}
+#content #left #menu h6.selected a,
+#content #left #menu h6.selected a span{
+	background: none;
+	font-size: 18px;
+    font-weight: normal;
+}
+#content #left #menu ul,
+#content #left #menu li ul{
+	background: #d5eff3;
+}
+#content #left #menu li ul{
+	border-left: 18px solid #d5eff3;
+}
+#content #left #menu li,
+#content #left #menu li ul li{
+	border-top: 1px dotted #2f98c7;
+	border-bottom: 0;
+}
+#content #left #menu li ul li{
+	background: none;
+}
+#content #left #menu li a,
+#content #left #menu li li a{
+	color: #333;
+	font-weight: 700;
+	text-decoration: none;
+	background: url("../images/mobiclip/bullet_01.png") no-repeat 0 6px;
+}
+#content #left #menu li a:hover{
+	color: #e259ae;
+}
+.submenu ul li a{
+	background: #B4B4B4 url("../images/button_selected.png") repeat-x;
+    border-color: #cfcfcf;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    color: #333!important;
+    display: block;
+    padding: 5px 8px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+#content div.title-box a{
+	height: auto;
+	line-height: 100%;
+	padding: 5px 10px !important;
+	font-weight: bold;
+	border: 0;
+	font-size: 12px;
+	margin-top: 3px;
+}
+.submenu ul li a:hover{
+}
+#content #left #menu li a{
+	height: auto!important;
+	font-size: 12px!important;
+}
+ul.yiiPager .selected a{
+	color: #fff;
+	background: #333;
+	border-color: #333;
+}
+ul.yiiPager a:hover{
+	border-color: #333;
+}
+table.promotion_table, .promotion_table th, .promotion_table td {
+	border: 1px solid #cdcdcd;
+	border-collapse: collapse;
+	padding: 10px;
+}
+.promotion_table {
+	margin: 0 auto;
+	width: 50%;
+}
+.promotion_table td {
+	text-align: center;
+	vertical-align: middle;
+}
+.ovh {
+	overflow: hidden;
+	padding: 10px 0;
+	text-align: center;
+}
+.fontB {
+	font-weight: bold;
+}
+.color-red {
+	color: red;
+}
+.created_time div {
+	margin-left: 70px !important;
+}
+.pagging {
+	float: right;
+	margin: 20px 0;
+}

@@ -1,0 +1,34 @@
+.header-body{
+    background-image:url(../images/header.png);
+    height: 120px !important;
+    background-position: center bottom;
+}
+.logo-amusic-big {
+    background: transparent url("../images/logo-amusic.png") no-repeat scroll center center;
+    margin-right: 90px;
+}
+.pt35{
+    padding-top: 35px;
+}
+.footer {
+    background-image: url("../images/footer_bg.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.ul_ft li a {
+    color: #FFF!important;
+}
+#search {
+    margin-left: 70px;
+    width: 550px;
+}
+.header-menu {
+    border-radius: 5px 5px 0px 0;
+}
+.logo img {
+    padding-left: 60px;
+}
+#search {
+    margin-left: 100px;
+    width: 385px;
+}

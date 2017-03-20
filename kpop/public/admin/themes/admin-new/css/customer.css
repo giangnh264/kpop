@@ -1,0 +1,86 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 9, 2014, 3:41:36 PM
+    Author     : KOI_GIANG
+*/
+ *{
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+    }
+    h4,.grid-view{
+        margin: 0;
+        padding:0
+    }
+    .box_content{
+        margin-bottom: 30px;
+        background-color: #EEE;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        padding: 10px;
+    }
+    .box_content .summary{
+        text-align: left;
+        background: #08C;
+        padding: 5px;
+        color: #FFF;
+        overflow: hidden;
+        margin: 0;
+    }
+    .grid-view table.items th {
+        color: #333;
+        background: #E4E2E2;
+        text-align: center;
+    }
+    .grid-view table.items th a {
+        color: #333;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .grid-view-loading{
+        background-position: center bottom;
+    }
+    .grid-view table.items th{
+        text-align: left;
+    }
+    .service_header h1{
+        background: #1B1B1B;
+        color: #CCC;
+        font-size: 21px;
+        padding: 10px;
+        font-weight: normal;
+    }
+    .fft{
+        overflow: hidden;
+        background: #EEE;
+        padding: 10px;
+        border-radius: 6px;
+    }
+    .search-form .ui-daterangepicker-arrows {
+        float: left;
+    }
+ .row > input {
+  margin-left: 100px !important;
+}
+
+input[type="submit"], input[type="reset"], input[type="button"], a.button {
+  background: url("../images/button.png") repeat-x scroll 0 0 #e5e3e3;
+  border-color: #dddddd #dddddd #c6c6c6 #c6c6c6;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  color: #515151 !important;
+  font-weight: bold;
+  margin: 0;
+  padding: 3px 12px;
+}
+
+.odd > td {
+  border: 1px solid #98c6ea;
+  height: 27px;
+  line-height: 27px;
+  padding-left: 5px;
+}

@@ -1,0 +1,10 @@
+Options +FollowSymLinks
+#IndexIgnore */*
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+Header set X-Frame-Options SAMEORIGIN
+
+# otherwise forward it to index.php
+RewriteRule !\.(js|ico|gif|jpe?g|png|css|swf|mp3|wav)$ index.php [L]

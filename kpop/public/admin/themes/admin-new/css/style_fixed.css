@@ -1,0 +1,572 @@
+/* -----------------------------------------------------------
+        header
+----------------------------------------------------------- */
+#header {
+    margin: 0 auto;
+    padding: 10px 0 0 0;
+    background: #b0b0b0 url("../images/header_background.png") repeat;
+}
+
+/* -----------------------------------------------------------
+        header -> outer
+----------------------------------------------------------- */
+#header #header-outer {
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* -----------------------------------------------------------
+        header -> quick
+----------------------------------------------------------- */
+#header #header-inner #quick ul {
+    left: 0;
+}
+
+#header #header-inner #quick li ul ul {
+    left: 200px;
+}
+
+/* -----------------------------------------------------------
+        content
+----------------------------------------------------------- */
+#content {
+    #margin: 10px auto 10px auto;
+    /* background: url("../images/content_fixed.png") repeat-y top left; */
+   background: #FFF;
+    clear: both;
+    overflow: hidden;
+}
+
+/* -----------------------------------------------------------
+        content -> left
+----------------------------------------------------------- */
+#content #left {
+    left: auto;
+    width: 210px;
+    position: relative;
+    float: left;
+	margin-top: 10px;
+}
+
+/* -----------------------------------------------------------
+        content -> left -> menu
+----------------------------------------------------------- */
+#content #left #menu {
+    margin: 0px 0 0 10px;
+}
+
+/* -----------------------------------------------------------
+        content -> left -> date picker
+----------------------------------------------------------- */
+#content #left #date-picker {
+    margin: 5px 10px 0 10px;
+}
+
+/* -----------------------------------------------------------
+        content -> right
+----------------------------------------------------------- */
+#content #right {
+    clear: none;
+    overflow: hidden;
+}
+
+/* -----------------------------------------------------------
+        content -> right -> forms -> labels
+----------------------------------------------------------- */
+#content div.form label {
+    left: 0;
+    width: 120px;
+    position: relative;
+    float: left;
+}
+
+#content div.form .created_time label {
+    float: none !important;
+}
+
+#content div.box-left div.form div.fields div.field div.label,#content div.box-right div.form div.fields div.field div.label
+{
+    float: none;
+}
+
+/* -----------------------------------------------------------
+        content -> right -> forms -> input
+----------------------------------------------------------- */
+.search-form select {
+    width: 208px !important;
+}
+
+#content div.box div.form div.fields div.field div.input input.small {
+    width: 180px;
+}
+
+#content div.box div.form div.fields div.field div.input input.medium {
+    width: 300px;
+}
+
+#content div.box div.form div.fields div.field div.input input.large {
+    width: 479px;
+}
+
+#content div.box-left div.form div.fields div.field div.input input,#content div.box-right div.form div.fields div.field div.input input
+{
+    width: 307px;
+}
+
+/* -----------------------------------------------------------
+        content -> right -> forms -> textarea
+----------------------------------------------------------- */
+#content div.box div.form div.fields div.field div.textarea {
+    margin: 0;
+    float: left;
+}
+
+#content div.box div.form div.fields div.field div.textarea textarea,#content div.box div.form div.fields div.field div.textarea textarea
+{
+    width: 301px;
+}
+
+/* -----------------------------------------------------------
+        content -> right -> forms -> select
+----------------------------------------------------------- */
+#content div.box div.form div.fields div.field div.select {
+    margin: 0;
+    float: left;
+}
+
+/* -----------------------------------------------------------
+        content -> right -> forms -> checkboxes
+----------------------------------------------------------- */
+#content div.box div.form div.fields div.field div.checkboxes {
+    margin: 0;
+    float: left;
+}
+
+/* -----------------------------------------------------------
+        content -> right -> forms -> radios
+----------------------------------------------------------- */
+#content div.box div.form div.fields div.field div.radios {
+    margin: 0;
+    float: left;
+}
+
+/* -----------------------------------------------------------
+        content -> right -> tables
+----------------------------------------------------------- */
+#content div.box table td.selected {
+    width: 5%;
+}
+
+#content div.box table td.date {
+    width: 30%;
+}
+
+/* -----------------------------------------------------------
+        footer
+----------------------------------------------------------- */
+#footer {
+    margin: 0 auto;
+}
+
+#footer p {
+    margin: 0 10px 0 10px;
+}
+
+/* Thangtv2 custom*/
+#header #header-inner #quick li ul span {
+    background: none !important;
+    padding: 3px 3px !important;
+    font-size: 13px;
+}
+
+input[type="submit"],input[type="reset"],input[type="button"],a.button {
+    background: url("../images/button.png") repeat-x scroll 0 0 #E5E3E3;
+    border-color: #DDDDDD #DDDDDD #C6C6C6 #C6C6C6;
+    border-style: solid;
+    border-width: 1px;
+    color: #515151 !important;
+    margin: 0;
+    padding: 6px 12px;
+    font-weight: bold;
+	border-radius: 3px;
+}
+
+select {
+    border: 1px solid #B3B3B3;
+    padding: 2px;
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+
+div.form .row select {
+    width: 150px;
+}
+
+#content div.title-box h1,#content div.title-box h2,#content div.title-box h3,#content div.title-box h4,#content div.title-box h5,#content div.title-box h6
+{
+    border: medium none;
+    color: #FFFFFF;
+    float: left;
+    margin: 0;
+    padding: 11px 0 11px 10px;
+}
+
+input[type="text"],input[type="password"],input[type="select"],input[type="search"],input[type="date"],textarea,select
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #B3B3B3 #EAEAEA #EAEAEA #B3B3B3;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+    float: left;
+    font-family: Lucida Grande, Verdana, Lucida Sans Regular,
+        Lucida Sans Unicode, Arial, sans-serif;
+    font-size: 11px;
+    margin: 0;
+    padding: 3px 2px;
+}
+
+.search-box {
+    /*margin-top: 5px !important;*/
+   display: none;
+}
+
+.search-form div div {
+    margin: 0;
+}
+
+.search-form .ui-daterangepicker-arrows {
+    float: right;
+}
+
+.search-form .ui-daterangepicker-arrows input {
+    float: none !important;
+    width: 158px !important;
+}
+
+#content .search-form div.form  input {
+    width: 202px!important;
+}
+
+#content div.form input[type="text"],#content div.form input[type="password"],#content div.form input[type="select"],#content div.form input[type="search"],#content div.form input[type="date"],#content div.form input[type="submit"],#content div.form input[type="reset"],#content div.form input[type="button"]
+{
+    width: 270px;
+}
+
+.buttons {
+    clear: both;
+    padding: 10px 0 0 120px;
+    text-align: left;
+}
+
+.adminform {
+    background: #FFF;
+    padding: 5px 0;
+    margin: 15px 0;
+    position: relative;
+}
+
+.grid-view table.items th {
+    background: url("../images/colors/blue/title.png") repeat-x #336699!important;
+    overflow: hidden;
+	padding: 5px;
+	color: #FFF;
+	border: 1px solid #FFF;
+}
+
+.adminform .op-box {
+    line-height: 22px;
+    overflow: hidden;
+    /*	float: left;*/
+    padding-left: 1px;
+    position: absolute;
+}
+
+.adminform #expand {
+    clear: both;
+    /*background: #FFFFEE;*/
+    background-color: transparent;
+    background-image: -moz-linear-gradient(center top , rgba(255, 255, 255, 0.85), rgba(247, 247, 247, 0.85));
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #444444;
+    border-radius:2px;
+    position: absolute;
+    float: left;
+    clear: both;
+    top: 45px;
+    height: 15px;
+    margin-left: 5px;
+	display: none;
+}
+.adminform th#cid{
+    padding-left: 5px;
+}
+.adminform #show-exp {
+    /*background: url("../images/icon.png") no-repeat scroll -18px 0	transparent;*/
+    background: url("../images/arrow_down.png") no-repeat 18px 3px transparent;
+    cursor: pointer;
+    height: 12px;
+    margin: 4px 0 0 3px;
+    width: 30px;
+}
+.adminform table.items th select{
+    background-color: transparent;
+    background-image: -moz-linear-gradient(center top , rgba(255, 255, 255, 0.85), rgba(247, 247, 247, 0.85));
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius:2px;
+}
+.adminform table.items th select option{
+    background: #FFF;
+}
+.adminform table.items th.button-column{
+    padding-left: 5px;
+}
+
+form.adminform #cid_all {
+    margin-left: 0.3em;
+    position: relative;
+    z-index: 2;
+}
+
+#mn-expand {
+    background: #366ba1 !important;
+    margin: 0;
+    padding: 5px 0;
+    position: absolute;
+    top: 15px;
+    width: 145px;
+    z-index: 10;
+}
+
+#mn-expand li {
+    border-bottom: 1px solid #326395;
+    border-top: 1px solid #4377AB;
+    padding: 5px 0;
+}
+
+#mn-expand li a {
+    color: #FFF !important;
+}
+
+.grid-view .summary {
+    margin: 0 !important;
+}
+
+.grid-view table tr.rhover td {
+    background: #ECFBD4 !important;
+}
+
+.grid-view table tr.marked td {
+    background: #FFCC99 !important;
+}
+
+.grid-view table td {
+   background: none repeat scroll 0 0 #FFFFFF !important;
+    border-bottom: 1px solid #CDCDCD !important;
+    border-right: 1px solid #CDCDCD !important;
+    padding: 5px !important;
+    font-size: 100% !important;
+	font-size: 100% !important;
+}
+.grid-view input[type="text"]{
+    float: none!important;
+}
+
+#right .content-body {
+    background: #FFF !important;
+}
+
+.submenu .page-title {
+    color: #FFFFFF;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    padding-left: 15px;
+    width: 600px;
+}
+
+.submenu ul {
+    float: right;
+}
+
+.submenu ul li {
+    float: left;
+}
+
+.submenu ul li a {
+    background: #4e85bb url("../images/colors/blue/button_highlight.png")
+        repeat-x;
+    border: 1px solid #316293;
+    border-left: none;
+    color: #FFFFFF;
+    margin: 0 3px;
+    padding: 5px !important;
+    text-align: center;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.submenu ul li a:hover {
+    background: #b4b4b4 url("../images/button_selected.png") repeat-x;
+    /* border-top: 1px solid #cccccc;
+border-left: 1px solid #bebebe;
+border-right: 1px solid #b1b1b1;
+border-bottom: 1px solid #afafaf;*/
+    color: #515151 !important;
+    outline: none;
+    text-decoration: none;
+}
+
+.meta_field {
+    display: none;
+}
+
+#loading {
+    background: #000 url("../images/ajax-loader.gif") no-repeat center
+        center;
+    filter: alpha(opacity = 50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
+span.menu-icon {
+    border-right: 1px solid #2E5C89;
+    border-left: 0 !important;
+    background: none !important;
+    left: 0 !important;
+    padding: 8px 8px 4px !important;
+    top: 0 !important;
+}
+
+a:hover span.menu-icon {
+    border-right: 1px solid #464646 !important;
+}
+
+#content div.success {
+    background: #E6EFC2;
+    border: 1px solid #C6D880;
+    clear: both;
+    color: #4E6100;
+    height: 1%;
+    overflow: hidden;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+#content div.wrr {
+    background: #FBE3E4;
+    border: 1px solid #FBC2C4;
+    clear: both;
+    color: #860006;
+    height: 1%;
+    overflow: hidden;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+#img-display {
+    border: 1px solid #CCCCCC;
+    display: block;
+    margin-left: 10px;
+}
+.avatar-display{
+    padding-left: 130px
+}
+.report-zone{
+    background: #FFF;
+    padding: 10px 2px;
+}
+
+#jobDialog .search-form .row{
+    overflow: hidden;
+    margin: 5px 0;
+}
+#jobDialog .search-form .row label{
+    float: left;
+}
+#jobDialog .search-form .row input[type="text"]{
+    float: left;
+}
+#jobDialog fieldset{
+    border: 1px solid #DDD;
+}
+.player-video{
+    background: #FFF;
+}
+.import-btn input.ui-button{float:left;}
+.import-btn .loading-import{float:left;padding-left:10px}
+.title-result{padding: 5px;}
+.import-result{overflow-x:auto;height:800px;}
+.import-result tr{border-left: 1px solid #ccc;}
+#admin-importsong-model-form .options-row{float:left;width: 100%;padding-bottom: 12px;}
+#admin-importsong-model-form .options-row lable {float:left;width: 150px!important;]}
+
+
+/* OVERLAY LOADING*/
+.overlay{
+    background:transparent url(../images/overlay_back.png) repeat top left;
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    z-index:100;
+}
+.box{
+    position:fixed;
+    top:45%;
+    left:45%;
+    right:30%;
+    background:url(../images/ajax-loader.gif) no-repeat;
+    padding:20px;
+    z-index:101;
+    width:100px;
+    height:100px;
+    display: none;
+}
+
+.artist-zone{
+	background:#b4cbdd;
+	border: 1px dashed #3399FF;
+	padding: 3px 10px;
+	margin-left: 120px;
+	margin-top: 5px;
+}
+.artist-zone p{
+	margin: 3px 0;
+	overflow: hidden;
+}
+.remove-artist{
+	float: right;
+	padding-right: 10px;
+	font-size: 0pt;
+	width: 16px;
+	height: 16px;
+	background: url(../images/delete.png) no-repeat;
+	cursor: pointer;
+}
+
+.appendix_list {
+    background: none repeat scroll 0 0 #B4CBDD;
+    border: 1px dashed #3399FF;
+    margin-left: 120px;
+    margin-top: 20px;
+    padding: 3px 0px 3px 5px;
+    overflow: hidden;
+    clear: both;
+}
+#appendix_no0 p, #appendix_no1 p {
+    margin: 3px 0;
+    overflow: hidden;
+}
+
+.hadsong {
+    background: none repeat scroll 0 0 #CCCCCC;
+    border: 1px solid red;
+    font-weight: bold;
+    margin: 5px 0 5px 120px;
+    padding: 5px;
+}
