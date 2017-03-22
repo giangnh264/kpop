@@ -29,7 +29,7 @@
             <div class="entry-header">
                                     <span class="meta-category meta-small"><a href="#" class="herald-cat-2">Netizen</a></span>
 
-                <h2 class="entry-title h5"><a href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>$item->url_key));?>"><?php echo Formatter::smartCut($item->title, 90, 0); ?></a></h2>
+                <h2 class="entry-title h5"><a href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>Common::makeFriendlyUrl($item->title)));?>"><?php echo Formatter::smartCut($item->title, 90, 0); ?></a></h2>
                 <div class="entry-meta meta-small">
                     <div class="meta-item herald-views">3,703 Views</div>
                     <div class="meta-item herald-rtime">2 Min Read</div>

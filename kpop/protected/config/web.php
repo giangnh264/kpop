@@ -49,6 +49,7 @@ return CMap::mergeArray(require(dirname(__FILE__) . "/main.php"),CMap::mergeArra
 						'tim-kiem/' => '/search/index',
 						'video-playlist'=>'videoplaylist',
 						'tin-tuc/<url_key:[a-zA-Z0-9-]+>,<id:\d+>' => 'news/index',
+						'<url_key:[a-zA-Z0-9-]+>' => 'category/index',
 						'mv/<title:[a-zA-Z0-9-]+>,<id:\d+>' => 'video/view',
 						'nhac-doc-quyen' => 'shell',
 						'bai-hat-doc-quyen' => 'shell/song',

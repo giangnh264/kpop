@@ -10,6 +10,7 @@ class NewsModel extends BaseNewsModel
 	{
 		return parent::model($className);
 	}
+
     const DEACTIVE = 0;
     const ACTIVE = 1;
 
@@ -18,6 +19,18 @@ class NewsModel extends BaseNewsModel
             "published" => array(
                 "condition" => "`t`.`status` = " . self::ACTIVE,
             ),
+        );
+    }
+
+    /**
+     * @return array relational rules.
+     */
+    public function relations()
+    {
+        // NOTE: you may need to adjust the relation name and the related
+        // class name for the relations automatically generated below.
+        return array(
+            'relations_tag_news'=>array(self::HAS_MANY, 'RelationsTagNewsModel', 'news_id', 'joinType'=>'INNER JOIN'),
         );
     }
 

@@ -37,7 +37,7 @@
                             ?>
                             <li id="menu-item-1354"
                                 class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1354 herald-mega-menu">
-                                <a href="http://demo.mekshq.com/herald/?cat=6"><?php echo strtoupper($category->name);?></a>
+                                <a href="<?php echo Yii::app()->createUrl('category/index', array('url_key'=>$category->url_key));?>"><?php echo strtoupper($category->name);?></a>
                                 <ul class="sub-menu">
                                     <li class="container herald-section ">
                                         <div class="row">
@@ -50,7 +50,7 @@
                                                     <article
                                                         class="herald-lay-i post-171 post type-post status-publish format-standard has-post-thumbnail hentry category-entertainment tag-blog tag-music-2 tag-studio">
                                                         <div class="herald-post-thumbnail herald-format-icon-small">
-                                                            <a href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>$item->url_key));?>"
+                                                            <a href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>Common::makeFriendlyUrl($item->title)));?>"
                                                                title="Start recording like a pro with the help of these 6 tips">
                                                                 <img width="215" height="120"  src="<?php echo Yii::app()->params['storage']['NewsUrl'] . $item->url_img;?>" class="attachment-herald-lay-d size-herald-lay-d wp-post-image"
                                                                      alt="<?php echo $item->title;?>"
@@ -61,13 +61,13 @@
                                                         <div class="entry-header">
                                                                 <span class="meta-category meta-small"><a href="#" class="herald-cat-6"><?php echo strtoupper($category->name);?></a></span>
 
-                                                            <h2 class="entry-title h6"><a href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>$item->url_key));?>"><?php echo Formatter::smartCut($item->title, 90, 0); ?></a></h2>
+                                                            <h2 class="entry-title h6"><a href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>Common::makeFriendlyUrl($item->title)));?>"><?php echo Formatter::smartCut($item->title, 90, 0); ?></a></h2>
                                                             <div class="entry-meta meta-small">
                                                                 <div class="meta-item herald-date"><span class="updated">6 days ago</span></div>
                                                             </div>
                                                         </div>
                                                     </article>
-                                                    <?php endforeach;?>
+                                                    <?php endforeach; ?>
                                                 </div>
                                             </div>
                                         </div>

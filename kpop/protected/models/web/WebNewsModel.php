@@ -35,9 +35,22 @@ class WebNewsModel extends NewsModel
         return self::model()->published()->findAll($cr);
     }
 
-    public function getImgById($news_id){
+    public function getNewsByTag($news_obj, $limit = 10, $offset = 0){
+//        $tag_news = RelationsTagNewsModel::model()->findAllByAttributes(array('news_id'=>$news_id));
+        $list_tags = array();
+        foreach ($news_obj->relations_tag_news as $tag){
+            $list_tags[] = $tag->tag_id;
+        }
+        $criteria = new CDbCriteria;
+        $criteria->alias = 't';
+        $criteria->join = 'INNER JOIN relations_tag_news ON relations_tag_news.news_id = t.id';
+        $criteria->addInCondition('relations_tag_news.tag_id', $list_tags);
 
-        return Yii::app()->params['storage']['NewsUrl'];
+        $criteria->limit = $limit;
+        $criteria->offset = $offset;
+
+        return NewsModel::model()->findAll($criteria);
+
     }
 
 }

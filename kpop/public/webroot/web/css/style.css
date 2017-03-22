@@ -23652,3 +23652,19 @@ ul.mks_themeforest_widget_ul li img {
 .mks_read_more {
     margin-top: 10px;
 }
+.col-mod-single .entry-header .entry-title{
+    font-size: 25px;
+}
+.entry-content h2{
+    font-size: 18px;
+    margin-bottom: 0;
+}
+#title-container{
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.herald-posts .herald-ovrld .herald-post-thumbnail a img{
+    width: 300px;
+    height: 200px;
+}

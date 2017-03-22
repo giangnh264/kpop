@@ -24,8 +24,8 @@
         <?php
         foreach ($categorys as $category):
         ?>
-        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-991"><a
-                href="#"><?php echo strtoupper($category->name);?></a>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-991"><a
+                href="<?php echo Yii::app()->createUrl('category/index', array('url_key'=>$category->url_key));?>"><?php echo strtoupper($category->name);?></a>
         </li>
         <?php endforeach;?>
 

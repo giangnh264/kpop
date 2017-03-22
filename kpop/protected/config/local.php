@@ -31,7 +31,7 @@ return array(
     ),
     'params' => array(
         'local_mode' => 1,
-        'base_url' => 'http://104.199.237.187:8080',
+        'base_url' => 'http://192.168.1.39:9999',
         'crbt' => array(
             'url' => 'http://113.187.31.231:8080/spservice/',
             'sid' => '589002',
@@ -52,8 +52,9 @@ return array(
             'staticUrl' => 'http://static.amusic.vn',
             'baseStorage' => '/u01/storage/amusic/',
 
-            'NewsDir' => 'E:\\Project\\kpop\\public\\webroot\\img\\',
-            'NewsUrl' => 'http://192.168.42.95:9999/img/',
+            'NewsDir' => 'E:\\MyProject\\static\\img\\',
+//            'NewsUrl' => 'http://192.168.42.95:8888\img/',
+            'NewsUrl' => 'http://192.168.1.39:8888/img/',
 
         ),
 

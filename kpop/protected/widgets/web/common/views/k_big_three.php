@@ -2,7 +2,7 @@
 
     <div class="herald-mod-wrap">
         <div class="herald-mod-head herald-cat-2">
-            <div class="herald-mod-title"><h2 class="h6 herald-mod-h herald-color">JYP - NATIONAL</h2></div>
+            <div class="herald-mod-title"><h2 class="h6 herald-mod-h herald-color">JYP - NATIONA</h2></div>
         </div>
     </div>
     <div class="row herald-posts row-eq-height ">
@@ -13,20 +13,9 @@
             <div class="herald-ovrld">
                 <div class="herald-post-thumbnail">
                     <a href="http://demo.mekshq.com/herald/?p=140"
-                       title="The top 10 traveling taboos you should break">
-                        <img width="300"  height="200" src="<?php echo Yii::app()->request->baseUrl?>/web/images/herald120-300x200.jpg"
-                             class="attachment-herald-lay-b1 size-herald-lay-b1 wp-post-image" alt=""
-                             srcset="<?php echo Yii::app()->request->baseUrl?>/web/images/herald120-300x200.jpg 300w, images//herald120-768x512.jpg 768w, images//herald120-1024x683.jpg 1024w, images//herald120-414x276.jpg 414w, images//herald120-470x313.jpg 470w, images//herald120-640x426.jpg 640w, images//herald120-130x86.jpg 130w, images//herald120-187x124.jpg 187w, images//herald120-990x660.jpg 990w, images//herald120.jpg 1320w, images//herald120-600x400.jpg 600w, images//herald120-800x533.jpg 800w"
-                             sizes="(max-width: 300px) 100vw, 300px" data-wp-pid="1259"/></a>
-                </div>
-
-                <div class="entry-header"> <span class="meta-category"><a href="http://demo.mekshq.com/herald/?cat=2" class="herald-cat-2">Travel</a></span>
-
-                    <h2 class="entry-title h6"><a href="http://demo.mekshq.com/herald/?p=140">The top 10 traveling taboos you should break</a></h2>
-                    <div class="entry-meta">
-                        <div class="meta-item herald-date"><span class="updated">6 days ago</span>
-                        </div>
-                    </div>
+                       title="Thông tin về các nghệ sỹ của JYP ENTERTAINMENT">
+                        <img width="300"  height="200" src="<?php echo Yii::app()->params['storage']['NewsUrl'] . 'big3/jyp_nation.jpg';?>"
+                             class="attachment-herald-lay-b1 size-herald-lay-b1 wp-post-image" alt="JYP - NATIONA"/></a>
                 </div>
             </div>
 
@@ -170,7 +159,7 @@
 
     <div class="herald-mod-wrap">
         <div class="herald-mod-head herald-cat-3">
-            <div class="herald-mod-title"><h2 class="h6 herald-mod-h herald-color">YG - FAMILY</h2>
+            <div class="herald-mod-title"><h2 class="h6 herald-mod-h herald-color">SM - TOWN</h2>
             </div>
         </div>
     </div>
@@ -182,29 +171,12 @@
             <div class="herald-ovrld">
                 <div class="herald-post-thumbnail">
                     <a href="http://demo.mekshq.com/herald/?p=182"
-                       title="The beginner&#8217;s guide to buying the right skirt"><img width="300"
-                                                                                         height="200"
-                                                                                         src="<?php echo Yii::app()->request->baseUrl?>/web/images/herald104-300x200.jpg"
-                                                                                         class="attachment-herald-lay-b1 size-herald-lay-b1 wp-post-image"
-                                                                                         alt=""
-                                                                                         srcset="<?php echo Yii::app()->request->baseUrl?>/web/images/herald104-300x200.jpg 300w, images//herald104-768x513.jpg 768w, images//herald104-1024x683.jpg 1024w, images//herald104-414x276.jpg 414w, images//herald104-470x313.jpg 470w, images//herald104-640x426.jpg 640w, images//herald104-130x86.jpg 130w, images//herald104-187x124.jpg 187w, images//herald104-990x661.jpg 990w, images//herald104.jpg 1320w, images//herald104-600x400.jpg 600w, images//herald104-800x534.jpg 800w"
-                                                                                         sizes="(max-width: 300px) 100vw, 300px"
-                                                                                         data-wp-pid="1243"/></a>
-                </div>
-
-                <div class="entry-header">
-                                        <span class="meta-category"><a href="http://demo.mekshq.com/herald/?cat=3"
-                                                                       class="herald-cat-3">Fashion</a></span>
-
-                    <h2 class="entry-title h6"><a href="http://demo.mekshq.com/herald/?p=182">The
-                            beginner&#8217;s guide to buying the right skirt</a></h2>
-                    <div class="entry-meta">
-                        <div class="meta-item herald-date"><span class="updated">6 days ago</span>
-                        </div>
-                    </div>
+                       title="The beginner&#8217;s guide to buying the right skirt"><img width="300"  height="200"
+                         src="<?php echo Yii::app()->params['storage']['NewsUrl'] . 'big3/sm_town.jpg';?>"
+                         class="attachment-herald-lay-b1 size-herald-lay-b1 wp-post-image"
+                         alt="SM - TOWN" data-wp-pid="1243"/></a>
                 </div>
             </div>
-
 
         </article>
 
@@ -343,8 +315,8 @@
 <div class="herald-module col-lg-4 col-md-4 col-sm-4" id="herald-module-1-5" data-col="4">
 
     <div class="herald-mod-wrap">
-        <div class="herald-mod-head herald-cat-4">
-            <div class="herald-mod-title"><h2 class="h6 herald-mod-h herald-color">SM - TOWN</h2></div>
+        <div class="herald-mod-head herald-cat-1">
+            <div class="herald-mod-title"><h2 class="h6 herald-mod-h herald-color">YG - FAMILY</h2></div>
         </div>
     </div>
     <div class="row herald-posts row-eq-height ">
@@ -355,29 +327,13 @@
             <div class="herald-ovrld">
                 <div class="herald-post-thumbnail">
                     <a href="http://demo.mekshq.com/herald/?p=174"
-                       title="This is how coffee can help you predict the future"><img width="300"
-                                                                                       height="200"
-                                                                                       src="http://demo.mekshq.com/herald/wp-content/uploads/2015/05/herald034-e1447696639921-300x200.jpg"
-                                                                                       class="attachment-herald-lay-b1 size-herald-lay-b1 wp-post-image"
-                                                                                       alt=""
-                                                                                       srcset="http://demo.mekshq.com/herald/wp-content/uploads/2015/05/herald034-e1447696639921-300x200.jpg 300w, http://demo.mekshq.com/herald/wp-content/uploads/2015/05/herald034-e1447696639921-414x276.jpg 414w, http://demo.mekshq.com/herald/wp-content/uploads/2015/05/herald034-e1447696639921-470x313.jpg 470w, http://demo.mekshq.com/herald/wp-content/uploads/2015/05/herald034-e1447696639921-640x426.jpg 640w, http://demo.mekshq.com/herald/wp-content/uploads/2015/05/herald034-e1447696639921-130x86.jpg 130w, http://demo.mekshq.com/herald/wp-content/uploads/2015/05/herald034-e1447696639921-187x124.jpg 187w"
-                                                                                       sizes="(max-width: 300px) 100vw, 300px"
-                                                                                       data-wp-pid="1287"/></a>
-                </div>
-
-                <div class="entry-header">
-                                        <span class="meta-category"><a href="http://demo.mekshq.com/herald/?cat=4"
-                                                                       class="herald-cat-4">Food &amp; Drinks</a></span>
-
-                    <h2 class="entry-title h6"><a href="http://demo.mekshq.com/herald/?p=174">This
-                            is how coffee can help you predict the future</a></h2>
-                    <div class="entry-meta">
-                        <div class="meta-item herald-date"><span class="updated">6 days ago</span>
-                        </div>
-                    </div>
+                       title="This is how coffee can help you predict the future"><img width="300" height="200"
+                       src="<?php echo Yii::app()->params['storage']['NewsUrl'] . 'big3/yg_family.jpg';?>"
+                       class="attachment-herald-lay-b1 size-herald-lay-b1 wp-post-image"
+                       alt="YG - FAMILY"   sizes="(max-width: 300px) 100vw, 300px"
+                       data-wp-pid="1287"/></a>
                 </div>
             </div>
-
 
         </article>
 
@@ -402,7 +358,7 @@
                 <div class="col-lg-8 col-xs-9 col-sm-8 herald-no-pad">
                     <div class="entry-header">
                                             <span class="meta-category meta-small"><a
-                                                    href="http://demo.mekshq.com/herald/?cat=4" class="herald-cat-4">Food &amp; Drinks</a></span>
+                                                    href="http://demo.mekshq.com/herald/?cat=4" class="herald-cat-1">Food &amp; Drinks</a></span>
 
                         <h2 class="entry-title h7"><a
                                 href="http://demo.mekshq.com/herald/?p=187"><span
@@ -436,7 +392,7 @@
                 <div class="col-lg-8 col-xs-9 col-sm-8 herald-no-pad">
                     <div class="entry-header">
                                             <span class="meta-category meta-small"><a
-                                                    href="http://demo.mekshq.com/herald/?cat=4" class="herald-cat-4">Food &amp; Drinks</a></span>
+                                                    href="http://demo.mekshq.com/herald/?cat=4" class="herald-cat-1">Food &amp; Drinks</a></span>
 
                         <h2 class="entry-title h7"><a href="http://demo.mekshq.com/herald/?p=151">The
                                 only Christmas dinner resources you will ever need</a></h2>
@@ -467,7 +423,7 @@
                 <div class="col-lg-8 col-xs-9 col-sm-8 herald-no-pad">
                     <div class="entry-header">
                                             <span class="meta-category meta-small"><a
-                                                    href="http://demo.mekshq.com/herald/?cat=4" class="herald-cat-4">Food &amp; Drinks</a></span>
+                                                    href="http://demo.mekshq.com/herald/?cat=4" class="herald-cat-1">Food &amp; Drinks</a></span>
 
                         <h2 class="entry-title h7"><a href="http://demo.mekshq.com/herald/?p=148">A
                                 healthy breakfast can get you far throughout the day</a></h2>
@@ -498,7 +454,7 @@
                 <div class="col-lg-8 col-xs-9 col-sm-8 herald-no-pad">
                     <div class="entry-header">
                                             <span class="meta-category meta-small"><a
-                                                    href="http://demo.mekshq.com/herald/?cat=4" class="herald-cat-4">Food &amp; Drinks</a></span>
+                                                    href="http://demo.mekshq.com/herald/?cat=4" class="herald-cat-1">Food &amp; Drinks</a></span>
 
                         <h2 class="entry-title h7"><a href="http://demo.mekshq.com/herald/?p=146">These
                                 10 cookie recipes will leave you breathless</a></h2>

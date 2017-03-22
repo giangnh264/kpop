@@ -24,7 +24,7 @@
 
                                                 <span class="meta-category"><a href="#" class="herald-cat-2"><?php echo $category->name;?></a></span>
 
-                                                <h2 class="entry-title h6"><a href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>$item->url_key));?>"><span class="herald-format-icon"><i class="fa fa-camera"></i></span><?php echo $item->title;?></a></h2>
+                                                <h2 class="entry-title h6"><a href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>Common::makeFriendlyUrl($item->title)));?>"><span class="herald-format-icon"><i class="fa fa-camera"></i></span><?php echo $item->title;?></a></h2>
                                                 <div class="entry-meta">
                                                     <div class="meta-item herald-date"><span
                                                             class="updated">6 days ago</span></div>
@@ -40,7 +40,7 @@
 
                                             </header>
 
-                                            <a class="fa-post-thumbnail" href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>$item->url_key));?>"
+                                            <a class="fa-post-thumbnail" href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>Common::makeFriendlyUrl($item->title)));?>"
                                                title="The simplest way to make the best of your vacation"><img width="550" height="520"  src="<?php echo Yii::app()->params['storage']['NewsUrl'] . $item->url_img;?>"
                                                                                                                class="attachment-herald-lay-fa1-full size-herald-lay-fa1-full wp-post-image" alt="" data-wp-pid="1209"/></a>
                                         </article>

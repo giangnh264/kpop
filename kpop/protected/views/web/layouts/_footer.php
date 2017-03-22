@@ -43,7 +43,7 @@
                                 <div class="col-lg-8 col-xs-9 herald-no-pad">
                                     <div class="entry-header">
 
-                                        <h2 class="entry-title h7"><a href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>$item->url_key));?>"><span
+                                        <h2 class="entry-title h7"><a href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>Common::makeFriendlyUrl($item->title)));?>"><span
                                                     class="herald-format-icon"><i class="fa fa-camera"></i></span><?php echo Formatter::smartCut($item->title, 50, 0); ?></a></h2>
                                         <div class="entry-meta meta-small">
                                             <div class="meta-item herald-views">11,733 Views</div>
@@ -91,7 +91,7 @@
                                 <div class="col-lg-8 col-xs-9 herald-no-pad">
                                     <div class="entry-header">
 
-                                        <h2 class="entry-title h7"><a href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>$item->url_key));?>"><span
+                                        <h2 class="entry-title h7"><a href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>Common::makeFriendlyUrl($item->title)));?>"><span
                                                     class="herald-format-icon"><i class="fa fa-camera"></i></span><?php echo Formatter::smartCut($item->title, 50, 0); ?></a></h2>
                                         <div class="entry-meta meta-small">
                                             <div class="meta-item herald-views">11,733 Views</div>

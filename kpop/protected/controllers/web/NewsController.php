@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: KOIGIANG
- * Date: 3/19/2017
- * Time: 2:28 PM
- */
 class NewsController extends Controller
 {
     public function actionIndex(){
@@ -13,8 +7,14 @@ class NewsController extends Controller
         if(empty($id)) die('not found');
 
         $news = WebNewsModel::model()->published()->findByPk($id);
+
         if(empty($news)) die('not found');
 
-        $this->render('index', compact('news'));
+        $limit = 10;
+        $offset = 0;
+
+        $news_relate = WebNewsModel::model()->getNewsByTag($news, $limit, $offset);
+
+        $this->render('index', compact('news', 'news_relate'));
     }
 }

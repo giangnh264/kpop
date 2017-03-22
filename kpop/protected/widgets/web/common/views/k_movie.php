@@ -21,7 +21,7 @@
             class="herald-lay-f post-171 post type-post status-publish format-standard has-post-thumbnail hentry category-entertainment tag-blog tag-music-2 tag-studio">
 
             <div class="herald-post-thumbnail herald-format-icon-middle">
-                <a href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>$item->url_key));?>"
+                <a href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>Common::makeFriendlyUrl($item->title)));?>"
                    title="Start recording like a pro with the help of these 6 tips">
                     <img width="300" height="168"
                          src="<?php echo Yii::app()->params['storage']['NewsUrl'] . $item->url_img;?>"
@@ -36,10 +36,10 @@
             <div class="entry-header"> <span class="meta-category meta-small"><a
                                             href="http://demo.mekshq.com/herald/?cat=6" class="herald-cat-6">Movie</a></span>
 
-                <h2 class="entry-title h5"><a href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>$item->url_key));?>"><?php echo Formatter::smartCut($item->title, 90, 0); ?></a></h2>
+                <h2 class="entry-title h5"><a href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>Common::makeFriendlyUrl($item->title)));?>"><?php echo Formatter::smartCut($item->title, 90, 0); ?></a></h2>
                 <div class="entry-meta meta-small">
                     <div class="meta-item herald-views">3,286 Lượt xem</div>
-                    <div class="meta-item herald-rtime">cách đây 2 phút</div>
+                    <div class="meta-item herald-rtime"><?php echo Formatter::formatTimeAgo($item->created_time);?></div>
                 </div>
             </div>
         </article>
