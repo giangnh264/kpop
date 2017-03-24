@@ -5,7 +5,7 @@ SCRIPTPATH=`dirname $SCRIPT`
 count=`ps axu | grep crawler_detail.sh | grep -v "grep" |wc -l`
 if [ $count -ge 3  ] ; then
     echo "Service is running"
-    /bin/ps -ef |grep "/var/www/kpop/kpop/kpop/crawler/detail.js" |grep -v grep |awk '{print$2}' |xargs kill >/dev/null 2>&1
+    /bin/ps -ef |grep "/var/www/kpop/kpop/kpop/protected/commands/shell/crawler_detail.sh" |grep -v grep |awk '{print$2}' |xargs kill >/dev/null 2>&1
     echo "Service to be killed"
     exit 1
 fi
