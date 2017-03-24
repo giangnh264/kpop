@@ -1,12 +1,3 @@
-var mysql = require('mysql');
-var connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'kpop'
-});
-
-
 var fs = require('fs');
 var jsdom = require('jsdom');
 var mkdirp = require('mkdirp');
@@ -15,10 +6,13 @@ var sanitizeHtml = require('sanitize-html');
 var Utils = require('./helpers/Utils.js');
 var params = require('./config/params.js');
 
-var jquery = fs.readFileSync("jquery-1.12.1.min.js", "utf-8");
+var jquery = fs.readFileSync("jquery.min.js", "utf-8");
 var dateTime = require('node-datetime');
 var dt = dateTime.create();
 dt.format('m/d/Y H:M:S');
+
+var connection = mysql.createConnection(params);
+connection.connect();
 
 try {
 
