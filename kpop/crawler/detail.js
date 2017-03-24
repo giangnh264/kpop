@@ -11,6 +11,7 @@ var dateTime = require('node-datetime');
 var dt = dateTime.create();
 dt.format('m/d/Y H:M:S');
 
+var mysql      = require('mysql');
 var connection = mysql.createConnection(params);
 connection.connect();
 
