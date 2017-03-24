@@ -37,11 +37,10 @@ try{
                 if(j==1) url = url_obj.original_url + '.html' ;
                 var obj_category = {
                     category_id:url_obj.id,
-                    original_url:url
+                    original_url:url,
+                    original_domain: url_obj.original_domain
                 };
                 data.push(obj_category);
-                // console.log(obj_category);
-                // CrawlPostsDetail(obj_category);
             }
 
         async.each(data, CrawlPostsDetail);
@@ -49,7 +48,6 @@ try{
 
     }
     function CrawlPostsDetail(docs, callback_fs){
-        // console.log(docs);
         var urlSite = docs.original_url;
     	if(urlSite!='' && urlSite!=null){
     		jsdom.env({
@@ -73,33 +71,16 @@ try{
                                 var original_url = $(this).find(".content .title a").attr("href");
                                 original_url = original_url.replace(/(\r\n|\n|\r|\t|\/)/gm,"");
 
-                                var title = sanitizeHtml($(this).find(".content .title a").text(), {
-                                    allowedTags: [ 'b', 'i', 'em', 'strong', 'p','img' ],
-                                    allowedAttributes: {
-                                        'img': ['src']
-                                    }
-                                });
+                                original_url = docs.original_domain + original_url
 
-                                var desctription = sanitizeHtml($(this).find(".content p.premise").text(), {
-                                    allowedTags: [ 'b', 'i', 'em', 'strong', 'p','img' ],
-                                    allowedAttributes: {
-                                        'img': ['src']
-                                    }
-                                });
-
-                                title = title.replace(/(\r\n|\n|\r|\t|\&quot;)/gm,"").trim();
-
-                                desctription = desctription.replace(/(\r\n|\n|\r|\t|\&quot;)/gm,"").trim();
 
                                 var original_img = $(this).find(".image img").attr("src");
+
                                 var original_img = original_img.replace(/262x197/g, '760x430');
 
-                                // console.log(title);
                                 var post = {
-                                    title: title,
                                     original_url: original_url,
                                     original_img: original_img,
-                                    description: desctription,
                                     category_id: docs.category_id,
                                     created_time: new Date(dt.now()),
                                     updated_time: new Date(dt.now()),
@@ -107,17 +88,16 @@ try{
 
                                 // console.log(post);
 
-                                var query = connection.query('SELECT * FROM news WHERE original_url = ?', post.original_url ,function (error, results, fields) {
+                                var query = connection.query('SELECT * FROM original_url WHERE original_url = ?', post.original_url ,function (error, results, fields) {
                                     if (error) throw error;
                                     if(results.length == 0){
                                         // callback_fs(post);
-                                        var query = connection.query('INSERT INTO news SET ?', post, function (error, result) {
+                                        var query = connection.query('INSERT INTO original_url SET ?  ON DUPLICATE KEY UPDATE updated_time = ?', [post, post.updated_time], function (error, result) {
                                             if (error) throw error;
                                             // Neat!
                                             // connection.end();
                                             console.log('INSERTED' + result.insertId);
                                         });
-                                        connection.destroy();
                                     }else{
                                         // console.log('da ton tai');
                                     }
@@ -132,26 +112,6 @@ try{
         }
     }
 
-    function ProcessData(data_obj) {
-        console.log(data_obj);
-        console.log('================GIANGNH==================');
-        /*var query = connection.query('SELECT * FROM news WHERE original_url = ?', data_obj.original_url ,function (error, results, fields) {
-            if (error) throw error;
-            if(results.length == 0){
-                var query = connection.query('INSERT INTO news SET ?', data_obj, function (error) {
-                    if (error) throw error;
-                    // Neat!
-                    // connection.end();
-                });
-            }else{
-                console.log('da ton tai');
-            }
-        });*/
-    }
-
-    function callback_fs(data) {
-        console.log(data);
-    }
 }catch(e)
 {
 	console.log('Exception: '+e);

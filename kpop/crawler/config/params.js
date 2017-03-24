@@ -1,9 +1,9 @@
-
 var params = {
 	host	: 'localhost',
 	user	: 'root',
 	password	: '',
 	database	: 'kpop',
+
 	/*storage: '/var/www/static/img',
 	storage_url: 'http://104.199.237.187:8080/img',*/
 

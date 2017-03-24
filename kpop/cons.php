@@ -1,4 +1,5 @@
 <?php
+$a = array();
 define('_APP_PATH_', dirname(__FILE__));
 
 define('DS', DIRECTORY_SEPARATOR);
