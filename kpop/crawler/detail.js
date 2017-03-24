@@ -26,7 +26,7 @@ try {
     var url_list = [];
     var Posts = {
         crawl: function () {
-            connection.query('SELECT * FROM original_url WHERE crawler_status = 0 ORDER BY updated_time DESC LIMIT 100', function (error, results) {
+            connection.query('SELECT * FROM original_url WHERE crawler_status = 0 ORDER BY updated_time ASC LIMIT 100', function (error, results) {
                 if (error) throw error;
                 for (var i = 0, len = results.length; i < len; i++) {
                     var page = results[i].original_url;
