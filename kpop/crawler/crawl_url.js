@@ -6,7 +6,7 @@ var sanitizeHtml = require('sanitize-html');
 var Utils = require('./helpers/Utils.js');
 var params = require('./config/params.js');
 
-var jquery = fs.readFileSync("jquery-1.12.1.min.js", "utf-8");
+var jquery = fs.readFileSync("jquery_min.js", "utf-8");
 
 var dateTime = require('node-datetime');
 var dt = dateTime.create();
