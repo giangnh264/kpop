@@ -32,7 +32,7 @@ try{
 	
     function getListUrl(url_obj) {
         var data = [];
-            for (var j = 10;  j >= 1; j--) {
+            /*for (var j = 10;  j >= 1; j--) {
                 var url = url_obj.original_url + '/trang-' + j + '.html' ;
                 if(j==1) url = url_obj.original_url + '.html' ;
                 var obj_category = {
@@ -41,10 +41,15 @@ try{
                     original_domain: url_obj.original_domain
                 };
                 data.push(obj_category);
-            }
-
+            }*/
+        var url = url_obj.original_url + '/trang-1.html' ;
+        var obj_category = {
+            category_id:url_obj.id,
+            original_url:url,
+            original_domain: url_obj.original_domain
+        };
+        data.push(obj_category);
         async.each(data, CrawlPostsDetail);
-
 
     }
     function CrawlPostsDetail(docs, callback_fs){
