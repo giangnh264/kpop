@@ -2,7 +2,7 @@
 SCRIPT=`readlink -f $0`
 SCRIPTPATH=`dirname $SCRIPT`
 
-count=`ps axu | grep crawler_index.sh | grep -v "grep" |wc -l`
+count=`ps axu | grep crawler_detail.sh | grep -v "grep" |wc -l`
 if [ $count -ge 3  ] ; then
     echo "Service is running"
     /bin/ps -ef |grep "/var/www/kpop/kpop/kpop/crawler/detail.js" |grep -v grep |awk '{print$2}' |xargs kill >/dev/null 2>&1
