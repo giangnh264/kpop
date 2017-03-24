@@ -14,6 +14,9 @@
     <link rel="alternate" type="application/rss+xml" title="Herald &raquo; Herald Home Comments Feed"
           href="http://demo.mekshq.com/herald/?feed=rss2&#038;page_id=207"/>
     <?php
+    Yii::app()->getClientScript()->registerCssFile(Yii::app()->request->baseUrl."/web/css/theme.css?v=".time());
+
+    Yii::app()->getClientScript()->registerCssFile(Yii::app()->request->baseUrl."/web/css/style.css?v=".time());
     Yii::app()->getClientScript()->registerScriptFile(Yii::app()->request->baseUrl."/web/js/analytics.js");
     Yii::app()->getClientScript()->registerScriptFile(Yii::app()->request->baseUrl."/web/js/common.js");
 //    Yii::app()->getClientScript()->registerScriptFile(Yii::app()->request->baseUrl."/web/css/default.css");
@@ -34,9 +37,6 @@
             padding: 0 !important;
         }
     </style>
-    <?php
-    Yii::app()->getClientScript()->registerCssFile(Yii::app()->request->baseUrl."/web/css/style.css?v=".time());
-    ?>
 
     <script type='text/javascript'>
         /* <![CDATA[ */

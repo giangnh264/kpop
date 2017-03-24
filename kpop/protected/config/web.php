@@ -131,6 +131,10 @@ return CMap::mergeArray(require(dirname(__FILE__) . "/main.php"),CMap::mergeArra
             			'time_block'=> 10, // Thoi gian block (phut)
             	),
             	"connector.providers"=>array("google","facebook"),
+				'constLimit'=>array(
+					"number.of.category_news"=>20,
+                    "pager.max.button.count" => 5,
+					),
 				"phpconf"=>array(
 						"php.date.format"=>"d/m/Y",
 						"javascript.date.format"=>"dd/mm/yy",

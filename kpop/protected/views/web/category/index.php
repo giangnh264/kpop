@@ -41,8 +41,15 @@
             <nav class="herald-pagination">
                 <span class="page-numbers current">1</span>
                 <a class="page-numbers" href="/herald/?cat=2&amp;paged=2">2</a>
-                <a class="next page-numbers" href="/herald/?cat=2&amp;paged=2">Next</a>	</nav>
+                <a class="next page-numbers" href="/herald/?cat=2&amp;paged=2">Next</a>
+            </nav>
 
+        <?php $this->widget ( "application.widgets.web.common.VLinkPager", array (
+            "pages" => $page,
+            "maxButtonCount" => Yii::app ()->params ["constLimit"] ["pager.max.button.count"],
+            "header" => "",
+            "htmlOptions" => array ( "class" => "pager" )
+            ) );?>
 
         </div>
         <div class="herald-sidebar col-lg-3 col-md-3 herald-sidebar-right" style="min-height: 1176px;">

@@ -36,7 +36,6 @@ class WebNewsModel extends NewsModel
     }
 
     public function getNewsByTag($news_obj, $limit = 10, $offset = 0){
-//        $tag_news = RelationsTagNewsModel::model()->findAllByAttributes(array('news_id'=>$news_id));
         $list_tags = array();
         foreach ($news_obj->relations_tag_news as $tag){
             $list_tags[] = $tag->tag_id;
@@ -51,6 +50,13 @@ class WebNewsModel extends NewsModel
 
         return NewsModel::model()->findAll($criteria);
 
+    }
+
+    public function countNewsByCat($category_id){
+        $cr = new CDbCriteria();
+        $cr->condition = 'category_id = :CAT_ID';
+        $cr->params = array(':CAT_ID'=>$category_id);
+        return self::model()->published()->count($cr);
     }
 
 }

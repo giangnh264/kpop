@@ -15,8 +15,14 @@ class CategoryController extends Controller
         $category = CategoryModel::model()->published()->findByAttributes(array('url_key'=> $url_key));
         if(empty($category)) die('not found');
 
-        $news = WebNewsModel::model()->getNewsByCat($category->id, 20, 0);
+        $pagesize = Yii::app()->params['constLimit']['number.of.category_news'];
 
-        $this->render('index', compact('news', 'category'));
+        $count = WebNewsModel::model()->countNewsByCat($category->id);
+        $page = new CPagination($count);
+        $page->pageSize = $pagesize;
+
+        $news = WebNewsModel::model()->getNewsByCat($category->id, $page->getLimit(), $page->getOffset());
+
+        $this->render('index', compact('news', 'category', 'page'));
     }
 }
