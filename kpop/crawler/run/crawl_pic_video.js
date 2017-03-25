@@ -81,7 +81,7 @@ try{
 
                                 var original_img = $(this).find(".image img").attr("src");
 
-                                    original_img = original_img.replace(/(555x416|262x197|555x37)/gm, '760x430');
+                                    original_img = original_img.replace(/(555x416|262x197|555x370)/gm, '760x430');
                                     // original_img = original_img.replace(/262x197/gm, '760x430');
                                     // original_img = original_img.replace(/555x370/gm, '760x430');
                                 console.log(original_img);
