@@ -3,10 +3,11 @@ var jsdom = require('jsdom');
 var mkdirp = require('mkdirp');
 var sanitizeHtml = require('sanitize-html');
 
-var Utils = require('./helpers/Utils.js');
-var params = require('./config/params.js');
+var Utils = require('../helpers/Utils.js');
+var params = require('../config/params.js');
 
-var jquery = fs.readFileSync("jquery.min.js", "utf-8");
+var jquery = fs.readFileSync("../factory/jquery.min.js", "utf-8");
+
 var dateTime = require('node-datetime');
 var dt = dateTime.create();
 dt.format('m/d/Y H:M:S');
@@ -14,6 +15,8 @@ dt.format('m/d/Y H:M:S');
 var mysql      = require('mysql');
 var connection = mysql.createConnection(params);
 connection.connect();
+
+var async = require('async');
 
 try {
 
@@ -55,9 +58,11 @@ try {
                         mainContent.find("#pollArticleDetail").remove();
 
                         var content = sanitizeHtml(mainContent.find(".content-news-detail").html(), {
+                        // var content = sanitizeHtml(mainContent.find(".content-news-detail").text(), {
                             allowedTags: ['b', 'i', 'em', 'strong', 'p', 'img', 'iframe'],
                             allowedAttributes: {
-                                'img': ['src']
+                                'img': ['src', 'style', 'width', 'height'],
+                                'iframe':['src', 'width','height', 'allowfullscreen']
                             }
                         });
                         // content = content.find("#pollArticleDetail").remove();
@@ -69,7 +74,8 @@ try {
                         var title = sanitizeHtml(mainContent.find(".folder-title-news-detail h1").text(), {
                             allowedTags: ['b', 'i', 'em', 'strong', 'p', 'img'],
                             allowedAttributes: {
-                                'img': ['src']
+                                'img': ['src'],
+
                             }
                         });
                         title = title.replace(/(\r\n|\n|\r|\t|\&quot;)/gm,"").trim();

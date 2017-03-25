@@ -9,5 +9,5 @@ if [ $count -ge 3  ] ; then
     echo "Service to be killed"
     exit 1
 fi
-cd /var/www/kpop/kpop/kpop/crawler
+cd /var/www/project/kpop/kpop/crawler/run
 node detail.js
