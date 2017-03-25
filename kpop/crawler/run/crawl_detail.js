@@ -24,7 +24,7 @@ try {
     var posts_prepare = params.posts_prepare;
     var posts = params.posts;
     var connString = params.db_conn_string;
-    console.log("==>Begin get posts prepare to crawl");
+    console.log("==========================>BEGIN<==========================");
 
     var url_list = [];
     var Posts = {
@@ -79,8 +79,6 @@ try {
                         });
                         title = title.replace(/(\r\n|\n|\r|\t|\&quot;)/gm,"").trim();
 
-                        console.log(title);
-
                         var news_obj = {
                             title:title,
                             description:description,
@@ -104,9 +102,7 @@ try {
                                 var name_array_before = {
                                     name: tag_before
                                 };
-                                console.log('----------------------------name_array_before----------------------------------');
 
-                                console.log(name_array_before);
                                 var query = connection.query('SELECT * FROM tag WHERE name = ?', name_array_before.name, function (error, results, fields) {
                                     if (error) throw error;
                                     if (results.length == 0) {
@@ -154,9 +150,6 @@ try {
                                 var tag_after = $(this).text();
                                 tag_after = tag_after.replace(/(\r\n|\n|\r|\t|\#)/gm, "").trim();
 
-                                console.log('----------------------------tag_after----------------------------------');
-
-                                console.log(tag_after);
                                 var name_array_before = {
                                     name: tag_after
                                 };
@@ -212,15 +205,8 @@ try {
                             }
                             var pathFile = pathStorage + params.DS + news_id + '.' + fileType;
                             var pathUrl = pathFile.replace(params.storage, '');
-                            console.log('pathUrl:' + pathUrl);
-                            // imgFullText[':img-'+i] = pathUrl;
-                            console.log('download to:' + pathFile);
-                            /*if(fs.existsSync(pathFile)){
-                             fs.unlinkSync(pathFile);
-                             }*/
 
                             Utils.download(original_img, pathFile, function (res) {
-                                // console.log('download callback:' + res);
                                 //update db
                                 connection.query('UPDATE news SET url_img = ? WHERE id = ?', [pathUrl, news_id], function (error, results, fields) {
                                     if (error) throw error;
@@ -229,7 +215,6 @@ try {
                             });
 
                         });
-
                         connection.query('UPDATE original_url SET crawler_status = 1 WHERE original_url = ?', [original_url_obj.original_url], function (error, results, fields) {
                          if (error) throw error;
                          // ...

@@ -23669,25 +23669,3 @@ ul.mks_themeforest_widget_ul li img {
     height: 200px;
 }
 
-.pager {
-    float: right;
-    margin-top: 20px;
-}
-ul {
-    margin: 0px;
-    padding: 0px;
-}
-.pager li {
-    display: inline-block;
-}
-
-.pager li a.active, .pager li a:hover {
-    border: 1px solid #0BA14B;
-    color: #0BA14B;
-}
-.pager li a {
-    display: block;
-    padding: 3px 8px;
-    border: 1px solid #DCDCDC;
-    color: #656464;
-}

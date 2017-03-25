@@ -1,5 +1,6 @@
 .pager {
-    float: right;
+    text-align: center;
+    /*float: right;*/
     margin-top: 20px;
 }
 ul {
@@ -11,12 +12,21 @@ ul {
 }
 
 .pager li a.active, .pager li a:hover {
-    border: 1px solid #0BA14B;
-    color: #0BA14B;
+    border: 1px solid #0288D1;
+    background-color: #0288D1;
+    color: #fff;
 }
 .pager li a {
     display: block;
-    padding: 3px 8px;
+    padding: 5px 8px;
     border: 1px solid #DCDCDC;
     color: #656464;
+    height:40px;
+    min-width: 40px;
+    border-radius: 3px;
+
+}
+
+.pager .next, .pager .previous {
+    text-align: center;
 }

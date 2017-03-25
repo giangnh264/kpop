@@ -26,7 +26,6 @@
                             </div>
                         </div>
 
-
                         <div class="col-lg-6 col-xs-6 col-sm-7 herald-no-pad">
                             <div class="entry-header">
                                 <h2 class="entry-title h6"><a href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>Common::makeFriendlyUrl($item->title)));?>"><?php echo Formatter::smartCut($item->title, 100, 0); ?></a></h2>
@@ -37,12 +36,6 @@
                 </article>
                 <?php endforeach;?>
             </div>
-
-            <nav class="herald-pagination">
-                <span class="page-numbers current">1</span>
-                <a class="page-numbers" href="/herald/?cat=2&amp;paged=2">2</a>
-                <a class="next page-numbers" href="/herald/?cat=2&amp;paged=2">Next</a>
-            </nav>
 
         <?php $this->widget ( "application.widgets.web.common.VLinkPager", array (
             "pages" => $page,

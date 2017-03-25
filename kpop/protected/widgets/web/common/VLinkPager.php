@@ -7,21 +7,20 @@ class VLinkPager extends CLinkPager {
 	public $suffix;
 	public function init() {
 		if ($this->nextPageLabel === null)
-			$this->nextPageLabel = 'Next';
-		if ($this->prevPageLabel === null)
-			$this->prevPageLabel = '&#171;';
+            $this->nextPageLabel = '&#187;';
+        if ($this->prevPageLabel === null)
+            $this->prevPageLabel = '&#171;';
 		if ($this->firstPageLabel === null)
 			$this->firstPageLabel = "";
 		if ($this->lastPageLabel === null)
 			$this->lastPageLabel = "";
 		if ($this->header === null)
 			$this->header = "";
-
 		if (! isset ( $this->htmlOptions ['id'] ))
 			$this->htmlOptions ['id'] = $this->getId ();
 		if (! isset ( $this->htmlOptions ['class'] ))
 			$this->htmlOptions ['class'] = 'yiiPager';
-		$this->pages->pageVar = 'p';
+		$this->pages->pageVar = 'trang-';
 	}
 
 	protected function createPageButtons()
@@ -75,44 +74,29 @@ class VLinkPager extends CLinkPager {
 	private function createPageUrlSeo($pageNumber=0)
 	{
 		$link="#";
-		if(!empty($this->suffix) && !empty($this->object_link)) {
-			$object = $this->object_link;
-			if ($pageNumber > 0) {
-				$object['other']['p'] = $pageNumber+1;
-			}
-			switch ($this->suffix) {
-				case 'gr'://genre
-					$link = URLHelper::makeUrlGenre($object);
-					break;
-				case 'at'://genre
-				case 'ai'://artist_list
-					$link = URLHelper::makeUrlMultiLevel($object);
-					break;
-			}
-		}else{
+        $link = Yii::app()->request->requestUri;
+        preg_match("/trang-(\w+)/", $link, $match);
+        if($match){
+//            die('1');
+            if(!empty($match[0])){
+                if ($pageNumber > 0) {
+                    $p = $pageNumber+1;
+                    $link = str_replace($match[0],'p='.$p, $link);
+                }else{
+                    $link = str_replace(array('?'.$match[0],'&'.$match[0]),'', $link);;
+                }
+            }
+        }else{
+            if ($pageNumber > 0) {
+                $p = $pageNumber+1;
+                if(strpos($link,'?')!==false){
+                    $link .="&p=".$p;
+                }else
+                    $link .="/trang-".$p;
+            }
 
-			$link = Yii::app()->request->requestUri;
-			preg_match("/p=(\w+)/", $link, $match);
-			if($match){
-				if(!empty($match[0])){
-					if ($pageNumber > 0) {
-						$p = $pageNumber+1;
-						$link = str_replace($match[0],'p='.$p, $link);
-					}else{
-						$link = str_replace(array('?'.$match[0],'&'.$match[0]),'', $link);;
-					}
-				}
-			}else{
-				if ($pageNumber > 0) {
-					$p = $pageNumber+1;
-					if(strpos($link,'?')!==false){
-						$link .="&p=".$p;
-					}else
-						$link .="?p=".$p;
-				}
+        }
 
-			}
-		}
 		return $link;
 	}
 }
