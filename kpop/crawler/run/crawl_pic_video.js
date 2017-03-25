@@ -32,7 +32,7 @@ try{
 	
     function getListUrl(url_obj) {
         var data = [];
-            /*for (var j = 20;  j >= 1; j--) {
+            for (var j = 20;  j >= 1; j--) {
                 var url = url_obj.original_url + '/trang-' + j + '.html' ;
                 if(j==1) url = url_obj.original_url + '.html' ;
                 var obj_category = {
@@ -41,19 +41,18 @@ try{
                     original_domain: url_obj.original_domain
                 };
                 data.push(obj_category);
-            }*/
-        var url = url_obj.original_url + '.html' ;
+            }
+        /*var url = url_obj.original_url + '.html' ;
         var obj_category = {
             category_id:url_obj.id,
             original_url:url,
             original_domain: url_obj.original_domain
-        };
+        };*/
         data.push(obj_category);
         async.each(data, CrawlPostsDetail);
 
     }
     function CrawlPostsDetail(docs, callback_fs){
-        console.log(docs.original_url);
         var urlSite = docs.original_url;
     	if(urlSite!='' && urlSite!=null){
     		jsdom.env({
@@ -79,10 +78,8 @@ try{
                                 // original_url = original_url.replace(/(\r\n|\n|\r|\t|\/)/gm,"");
 
                                 original_url = docs.original_domain + original_url;
-                                console.log(original_url);
 
                                 var original_img = $(this).find(".image img").attr("src");
-                                console.log(original_img);
 
                                     original_img = original_img.replace(/(555x416|262x197|555x37)/gm, '760x430');
                                     // original_img = original_img.replace(/262x197/gm, '760x430');
