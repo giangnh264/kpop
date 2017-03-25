@@ -76,7 +76,7 @@ try{
 
                                 var original_url = $(this).find(".content .title a").attr("href");
 
-                                original_url = original_url.replace(/(\r\n|\n|\r|\t|\/)/gm,"");
+                                // original_url = original_url.replace(/(\r\n|\n|\r|\t|\/)/gm,"");
 
                                 original_url = docs.original_domain + original_url;
                                 console.log(original_url);
