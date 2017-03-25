@@ -10,4 +10,4 @@ if [ $count -ge 3  ] ; then
     exit 1
 fi
 cd /var/www/project/kpop/kpop/crawler/run
-node detail.js
+node crawler_detail.js

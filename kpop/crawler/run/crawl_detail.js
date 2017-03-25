@@ -58,10 +58,9 @@ try {
                         mainContent.find("#pollArticleDetail").remove();
 
                         var content = sanitizeHtml(mainContent.find(".content-news-detail").html(), {
-                        // var content = sanitizeHtml(mainContent.find(".content-news-detail").text(), {
                             allowedTags: ['b', 'i', 'em', 'strong', 'p', 'img', 'iframe'],
                             allowedAttributes: {
-                                'img': ['src', 'style', 'width', 'height'],
+                                'img': ['src', 'style', 'width', 'height', 'alt'],
                                 'iframe':['src', 'width','height', 'allowfullscreen']
                             }
                         });
