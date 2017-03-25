@@ -58,10 +58,12 @@ try {
                         mainContent.find("#pollArticleDetail").remove();
 
                         var content = sanitizeHtml(mainContent.find(".content-news-detail").html(), {
-                            allowedTags: ['b', 'i', 'em', 'strong', 'p', 'img', 'iframe'],
+                            allowedTags: ['b', 'i', 'em', 'strong', 'p', 'img', 'iframe', 'div'],
                             allowedAttributes: {
                                 'img': ['src', 'style', 'width', 'height', 'alt'],
-                                'iframe':['src', 'width','height', 'allowfullscreen']
+                                'iframe':['src', 'width','height', 'allowfullscreen'],
+                                'div':['style'],
+
                             }
                         });
                         // content = content.find("#pollArticleDetail").remove();
