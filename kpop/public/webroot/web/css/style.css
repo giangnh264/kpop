@@ -23669,3 +23669,10 @@ ul.mks_themeforest_widget_ul li img {
     height: 200px;
 }
 
+.herald-section table {
+     border-collapse: separate;
+     border-spacing: 0;
+     border-top: 1px solid;
+     border-left: 1px solid;
+     margin-bottom: 30px;
+}

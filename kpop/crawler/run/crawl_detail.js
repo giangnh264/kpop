@@ -57,16 +57,14 @@ try {
                         var mainContent = $("#wrapper");
                         mainContent.find("#pollArticleDetail").remove();
 
-                        /*var content = sanitizeHtml(mainContent.find(".content-news-detail").html(), {
-                            allowedTags: ['b', 'i', 'em', 'strong', 'p', 'img', 'iframe', 'div'],
+                        var content = sanitizeHtml(mainContent.find(".content-news-detail").html(), {
+                            allowedTags: ['b', 'i', 'em', 'strong', 'p', 'img', 'iframe'],
                             allowedAttributes: {
                                 'img': ['src', 'style', 'width', 'height', 'alt'],
                                 'iframe':['src', 'width','height', 'allowfullscreen'],
-                                'div':['style'],
-
                             }
-                        });*/
-                        var content = mainContent.find(".content-news-detail").html();
+                        });
+                        // var content = mainContent.find(".content-news-detail").html();
                         // content = content.find("#pollArticleDetail").remove();
                         content = content.trim();
 
