@@ -47,8 +47,8 @@ try{
             category_id:url_obj.id,
             original_url:url,
             original_domain: url_obj.original_domain
-        };*/
-        data.push(obj_category);
+        };
+        data.push(obj_category);*/
         async.each(data, CrawlPostsDetail);
 
     }
