@@ -76,40 +76,42 @@ try{
                                 var original_url = $(this).find(".content .title a").attr("href");
 
                                 // original_url = original_url.replace(/(\r\n|\n|\r|\t|\/)/gm,"");
+                                if(original_url != 'undefined'){
+                                    original_url = docs.original_domain + original_url;
 
-                                original_url = docs.original_domain + original_url;
-
-                                var original_img = $(this).find(".image img").attr("src");
+                                    var original_img = $(this).find(".image img").attr("src");
 
                                     original_img = original_img.replace(/(555x416|262x197|555x370)/gm, '760x430');
                                     // original_img = original_img.replace(/262x197/gm, '760x430');
                                     // original_img = original_img.replace(/555x370/gm, '760x430');
-                                console.log(original_img);
+                                    console.log(original_img);
 
-                                var post = {
-                                    original_url: original_url,
-                                    original_img: original_img,
-                                    category_id: docs.category_id,
-                                    created_time: new Date(dt.now()),
-                                    updated_time: new Date(dt.now()),
-                                };
+                                    var post = {
+                                        original_url: original_url,
+                                        original_img: original_img,
+                                        category_id: docs.category_id,
+                                        created_time: new Date(dt.now()),
+                                        updated_time: new Date(dt.now()),
+                                    };
 
-                                // console.log(post);
+                                    // console.log(post);
 
-                                var query = connection.query('SELECT * FROM original_url WHERE original_url = ?', post.original_url ,function (error, results, fields) {
-                                    if (error) throw error;
-                                    if(results.length == 0){
-                                        // callback_fs(post);
-                                        var query = connection.query('INSERT INTO original_url SET ?  ON DUPLICATE KEY UPDATE updated_time = ?', [post, post.updated_time], function (error, result) {
-                                            if (error) throw error;
-                                            // Neat!
-                                            // connection.end();
-                                            console.log('INSERTED' + result.insertId);
-                                        });
-                                    }else{
-                                        // console.log('da ton tai');
-                                    }
-                                });
+                                    var query = connection.query('SELECT * FROM original_url WHERE original_url = ?', post.original_url ,function (error, results, fields) {
+                                        if (error) throw error;
+                                        if(results.length == 0){
+                                            // callback_fs(post);
+                                            var query = connection.query('INSERT INTO original_url SET ?  ON DUPLICATE KEY UPDATE updated_time = ?', [post, post.updated_time], function (error, result) {
+                                                if (error) throw error;
+                                                // Neat!
+                                                // connection.end();
+                                                console.log('INSERTED' + result.insertId);
+                                            });
+                                        }else{
+                                            // console.log('da ton tai');
+                                        }
+                                    });
+                                }
+
                             });
                         }
                     }
