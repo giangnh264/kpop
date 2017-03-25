@@ -32,7 +32,7 @@ try{
 	
     function getListUrl(url_obj) {
         var data = [];
-            for (var j = 10;  j >= 1; j--) {
+            for (var j = 20;  j >= 1; j--) {
                 var url = url_obj.original_url + '/trang-' + j + '.html' ;
                 if(j==1) url = url_obj.original_url + '.html' ;
                 var obj_category = {
