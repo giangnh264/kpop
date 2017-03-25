@@ -71,29 +71,23 @@ try{
                             var dom = mainContent.find("ul.group-prd li .box-prd");
 
                             var total = [];
-                            var i = 0;
                             dom.each(function (index) {
-                                i++;
-                                console.log(i);
                                 var ObjDocument = {};
 
                                 var original_url = $(this).find(".content .title a").attr("href");
 
-                                // original_url = original_url.replace(/(\r\n|\n|\r|\t|\/)/gm,"");
+                                original_url = original_url.replace(/(\r\n|\n|\r|\t|\/)/gm,"");
 
-                                original_url = docs.original_domain + original_url
+                                original_url = docs.original_domain + original_url;
                                 console.log(original_url);
 
-
                                 var original_img = $(this).find(".image img").attr("src");
-
                                 console.log(original_img);
-                                // if(i== 1){
-                                    original_img = original_img.replace(/555x416/gm, '760x430');
-                                // }else {
-                                    original_img = original_img.replace(/262x197/gm, '760x430');
-                                    original_img = original_img.replace(/555x370/gm, '760x430');
-                                // }
+
+                                    original_img = original_img.replace(/(555x416|262x197|555x37)/gm, '760x430');
+                                    // original_img = original_img.replace(/262x197/gm, '760x430');
+                                    // original_img = original_img.replace(/555x370/gm, '760x430');
+                                console.log(original_img);
 
                                 var post = {
                                     original_url: original_url,
