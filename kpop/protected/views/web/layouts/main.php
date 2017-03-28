@@ -4,9 +4,7 @@ $categorys = WebCategoryModel::model()->published()->findAll(array('order'=>'sor
 ?>
 <?php include_once '_topmenu.php';?>
 
-<?php include_once '_top_mobile_menu.php';?>
-<div id="content" class="herald-site-content herald-slide">
-
+<div id="main-wrapper">
     <?php echo $content ?>
 </div>
 <?php include_once '_footer.php';?>

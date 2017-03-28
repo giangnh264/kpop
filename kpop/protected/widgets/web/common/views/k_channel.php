@@ -1,47 +1,42 @@
-<div class="herald-module col-lg-12 col-md-12 col-sm-12" id="herald-module-1-1" data-col="12">
+<div id="main-box-1" class="main-box vce-border-top  ">
+    <h3 class="main-box-title ">Fresh Topics</h3>
+    <div class="main-box-inside ">
 
-    <div class="herald-mod-wrap">
-        <div class="herald-mod-head">
-            <div class="herald-mod-title"><h2 class="h6 herald-mod-h herald-color">Tin Tức</h2></div>
-            <div class="herald-mod-actions"><a class="herald-all-link" href="http://demo.mekshq.com/herald/?cat=6">Xem tất cả</a>
-                <div class="herald-slider-controls" data-col="4" data-autoplay="0"></div>
-            </div>
-        </div>
-    </div>
-    <div class="row herald-posts row-eq-height herald-slider">
 
-        <?php
-        $news = WebNewsModel::model()->getNewsByCat(1, 8, 0);
-        foreach ($news as $item):
+        <div class="vce-loop-wrap vce-slider-pagination vce-slider-c">
+            <?php
+                $news = WebNewsModel::model()->getNewsByCat(1, 4, 0);
+                foreach ($news as $item):
             ?>
             <article
-                class="herald-lay-f post-171 post type-post status-publish format-standard has-post-thumbnail hentry category-entertainment tag-blog tag-music-2 tag-studio">
+                class="vce-post vce-lay-c post-180 post type-post status-publish format-standard has-post-thumbnail hentry category-lifestyle category-technology tag-blog tag-magazine tag-technology-2">
 
-                <div class="herald-post-thumbnail herald-format-icon-middle">
+                <div class="meta-image">
                     <a href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>Common::makeFriendlyUrl($item->title)));?>"
-                       title="Start recording like a pro with the help of these 6 tips">
-                        <img width="300" height="168"
-                             src="<?php echo Yii::app()->params['storage']['NewsUrl'] . $item->url_img;?>"
-                             class="attachment-herald-lay-f size-herald-lay-f wp-post-image" alt=""
-                             srcset="<?php echo Yii::app()->params['storage']['NewsUrl'] . $item->url_img;?> 300w, <?php echo Yii::app()->params['storage']['NewsUrl'] . $item->url_img;?> 990w,
-                          <?php echo Yii::app()->params['storage']['NewsUrl'] . $item->url_img;?> 1320w, <?php echo Yii::app()->params['storage']['NewsUrl'] . $item->url_img;?> 470w,
-                          <?php echo Yii::app()->params['storage']['NewsUrl'] . $item->url_img;?> 640w, <?php echo Yii::app()->params['storage']['NewsUrl'] . $item->url_img;?> 215w,
-                          <?php echo Yii::app()->params['storage']['NewsUrl'] . $item->url_img;?> 414w"
-                             sizes="(max-width: 300px) 100vw, 300px" data-wp-pid="1182"/> </a>
+                       title="<?php echo Formatter::smartCut($item->title, 90, 0); ?>">
+                        <img width="375" height="195" src="<?php echo Yii::app()->params['storage']['NewsUrl'] . $item->url_img;?>"
+                             class="attachment-vce-lay-b size-vce-lay-b wp-post-image" alt=""/> </a>
                 </div>
 
-                <div class="entry-header"> <span class="meta-category meta-small"><a
-                            href="http://demo.mekshq.com/herald/?cat=6" class="herald-cat-6">Movie</a></span>
-
-                    <h2 class="entry-title h5"><a href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>Common::makeFriendlyUrl($item->title)));?>"><?php echo Formatter::smartCut(htmlspecialchars_decode($item->title, ENT_QUOTES), 90, 0); ?></a></h2>
-                    <div class="entry-meta meta-small">
-                        <div class="meta-item herald-views">3,286 Lượt xem</div>
-                        <div class="meta-item herald-rtime"><?php echo Formatter::formatTimeAgo($item->created_time);?></div>
+                <header class="entry-header">
+                                    <span class="meta-category"><a href="http://demo.mekshq.com/voice/?cat=1" class="category-1">Lifestyle</a> <span>&bull;</span> <a
+                                            href="http://demo.mekshq.com/voice/?cat=6" class="category-6">Technology</a></span>
+                    <h2 class="entry-title">
+                        <a href="http://demo.mekshq.com/voice/?p=180"
+                                               title="<?php echo Formatter::smartCut($item->title, 90, 0); ?>"><?php echo Formatter::smartCut($item->title,90, 0); ?>
+                        </a></h2>
+                    <div class="entry-meta">
+                        <div class="meta-item date"><span class="updated"><?php echo Formatter::formatTimeAgo($item->created_time);?></span></div>
                     </div>
+                </header>
+
+                <div class="entry-content"><?php echo Formatter::smartCut($item->description, 190, 0); ?></p>
                 </div>
+
             </article>
-        <?php endforeach;?>
+
+            <?php endforeach;?>
+        </div>
+
     </div>
-
-
 </div>
