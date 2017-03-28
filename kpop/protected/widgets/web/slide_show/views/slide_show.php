@@ -9,7 +9,7 @@
             <div class="vce-grid-text">
                 <div class="vce-featured-info">
                     <div class="vce-featured-section">
-                        <a href="<?php echo Yii::app()->createUrl('category/index', array('url_key'=>Common::makeFriendlyUrl($category->url_key)));?>" class="category-5"><?php echo $category->name;?></a></div>
+                        <a href="<?php echo Yii::app()->createUrl('category/index', array('url_key'=>Common::makeFriendlyUrl($category->url_key)));?>" class="category-<?php echo $category->id;?>"><?php echo $category->name;?></a></div>
 
                     <h2 class="vce-featured-title">
                         <a class="vce-featured-link-article" href="<?php echo Yii::app()->createUrl('news/index', array('id'=>$item->id, 'url_key'=>Common::makeFriendlyUrl($item->title)));?>"

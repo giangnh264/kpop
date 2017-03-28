@@ -3,102 +3,42 @@
 
     <div id="content" class="container site-content">
         <div id="primary" class="vce-main-content">
-            <?php $this->widget('application.widgets.web.common.KChannel', array()); ?>
+            <!--theo dong su kien-->
+            <?php $this->widget('application.widgets.web.common.HotEvent', array()); ?>
+            <!--end theo dong su kien-->
             <div id="main-box-2" class="main-box vce-border-top  ">
                 <div class="main-box-inside ">
                 <p><img style="margin: 0 auto;  display: block;" width="728" height="90"  src="<?php echo Yii::app()->request->baseUrl?>/web/images/blank_ad2.png"></p>
                 </div>
             </div>
+            <!--tin tuc HOT nổi bật-->
+            <?php $this->widget('application.widgets.web.common.ListHotNews', array()); ?>
+            <!--tin tuc HOT nổi bật-->
 
-            <?php $this->widget('application.widgets.web.common.KMovie', array()); ?>
-            <?php $this->widget('application.widgets.web.common.KReview', array()); ?>
+            <!--Video Pic nổi bật trong tuan-->
+            <?php $this->widget('application.widgets.web.common.Popular', array()); ?>
+            <!--end Video Pic nổi bật trong tuan-->
             <?php $this->widget('application.widgets.web.common.Lastest', array()); ?>
 
         </div>
         <aside id="sidebar" class="sidebar right">
 
             <div id="mks_ads_widget-2" class="widget mks_ads_widget">
-
-
                 <ul class="mks_adswidget_ul large">
                     <li data-showind="0">
                         <a href="#" target="_blank">
-                            <img src="http://mekshq.com/static/voice/ad_300x250.png" alt="ad_300x250.png"
-                                 style="width:300px; height:250px;" width="300" height="250"/>
+                            <img src="<?php echo Yii::app()->request->baseUrl?>/web/images/ads1.jpg" alt="ad_300x250.png" style="width:300px; height:250px;" width="300" height="250"/>
                         </a>
                     </li>
                 </ul>
 
-
             </div>
-            <div id="vce_posts_widget-5" class="widget vce_posts_widget"><h4 class="widget-title">Featured
-                    Posts</h4>
 
-                <ul class="vce-post-slider" data-autoplay="">
-
-
-                    <li>
-
-                        <a href="http://demo.mekshq.com/voice/?p=203" class="featured_image_sidebar"
-                           title="Solar Energy for Mother Earth and Everyday Smiles"><span class="vce-post-img"><img
-                                    width="380" height="260"
-                                    src="http://demo.mekshq.com/voice/wp-content/uploads/2014/11/unsplash_52bf2bb8d2dd0_1-1-380x260.jpg"
-                                    class="attachment-vce-fa-grid size-vce-fa-grid wp-post-image" alt=""
-                                    srcset="http://demo.mekshq.com/voice/wp-content/uploads/2014/11/unsplash_52bf2bb8d2dd0_1-1-380x260.jpg 380w, http://demo.mekshq.com/voice/wp-content/uploads/2014/11/unsplash_52bf2bb8d2dd0_1-1-145x100.jpg 145w"
-                                    sizes="(max-width: 380px) 100vw, 380px"/></span></a>
-                        <div class="vce-posts-wrap">
-                            <a href="http://demo.mekshq.com/voice/?p=203"
-                               title="Solar Energy for Mother Earth and Everyday Smiles" class="vce-post-link">Solar
-                                Energy for Mother Earth and Everyday Smiles</a>
-                            <div class="entry-meta">
-                                <div class="meta-item rtime">2 min read</div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-
-                        <a href="http://demo.mekshq.com/voice/?p=169" class="featured_image_sidebar"
-                           title="What Will Natural Beauty Be Like In 100 Years?"><span class="vce-post-img"><img
-                                    width="380" height="260"
-                                    src="http://demo.mekshq.com/voice/wp-content/uploads/2014/11/girl-flowers-1-380x260.jpg"
-                                    class="attachment-vce-fa-grid size-vce-fa-grid wp-post-image" alt=""
-                                    srcset="http://demo.mekshq.com/voice/wp-content/uploads/2014/11/girl-flowers-1-380x260.jpg 380w, http://demo.mekshq.com/voice/wp-content/uploads/2014/11/girl-flowers-1-145x100.jpg 145w"
-                                    sizes="(max-width: 380px) 100vw, 380px"/></span></a>
-                        <div class="vce-posts-wrap">
-                            <a href="http://demo.mekshq.com/voice/?p=169"
-                               title="What Will Natural Beauty Be Like In 100 Years?" class="vce-post-link">What
-                                Will Natural Beauty Be Like In 100 Years?</a>
-                            <div class="entry-meta">
-                                <div class="meta-item rtime">2 min read</div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-
-                        <a href="http://demo.mekshq.com/voice/?p=153" class="featured_image_sidebar"
-                           title="What Is the Definition of an Entrepreneur Lifestyle?"><span
-                                class="vce-post-img"><img width="380" height="260"
-                                                          src="http://demo.mekshq.com/voice/wp-content/uploads/2014/11/voice_21-380x260.jpg"
-                                                          class="attachment-vce-fa-grid size-vce-fa-grid wp-post-image"
-                                                          alt=""
-                                                          srcset="http://demo.mekshq.com/voice/wp-content/uploads/2014/11/voice_21-380x260.jpg 380w, http://demo.mekshq.com/voice/wp-content/uploads/2014/11/voice_21-145x100.jpg 145w"
-                                                          sizes="(max-width: 380px) 100vw, 380px"/></span></a>
-                        <div class="vce-posts-wrap">
-                            <a href="http://demo.mekshq.com/voice/?p=153"
-                               title="What Is the Definition of an Entrepreneur Lifestyle?" class="vce-post-link">What
-                                Is the Definition of an Entrepreneur Lifestyle?</a>
-                            <div class="entry-meta">
-                                <div class="meta-item rtime">3 min read</div>
-                            </div>
-                        </div>
-                    </li>
-
-                </ul>
+            <!--Pic nổi bật trong tuan-->
+            <?php $this->widget('application.widgets.web.right_col.FeaturedPic', array()); ?>
+            <!--end Pic nổi bật trong tuan-->
 
 
-            </div>
             <div id="mks_flickr_widget-2" class="widget mks_flickr_widget"><h4 class="widget-title">Photo
                     Stream</h4>
                 <ul class="flickr">
@@ -229,41 +169,4 @@
             </div>
         </aside>
     </div>
-<!--    </div>-->
-
-
-
-    <!--<div class="herald-section container " id="herald-section-1">
-
-        <div class="row">
-
-            <div class="herald-main-content col-lg-9 col-md-9 col-mod-main">
-
-                <div class="row">
-
-                    <?php /*$this->widget('application.widgets.web.common.KChannel', array()); */?>
-                    <?php /*$this->widget('application.widgets.web.common.KMovie', array()); */?>
-
-                    <div class="herald-module col-lg-12 col-md-12 col-sm-12" id="herald-module-1-2">
-
-                        <div class="herald-txt-module">
-                            <a href="http://themeforest.net/item/herald-news-portal-magazine-wordpress-theme/13800118?ref=meks&license=regular&open_purchase_for_item_id=13800118&purchasable=source"><img
-                                    class="aligncenter" src="http://static.tinnhac.com/images/ads/sao-kpop-den-voi-vn.jpg" alt=""></a>
-                        </div>
-                    </div>
-
-                    <?php /*$this->widget('application.widgets.web.common.KBigThree', array()); */?>
-
-                    <?php /*$this->widget('application.widgets.web.common.KReview', array()); */?>
-
-                </div>
-
-            </div>
-
-            <?php /*$this->widget('application.widgets.web.common.HotVideo', array()); */?>
-
-
-        </div>
-
-    </div>-->
 

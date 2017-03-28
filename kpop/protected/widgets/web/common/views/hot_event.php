@@ -1,5 +1,5 @@
 <div id="main-box-1" class="main-box vce-border-top  ">
-    <h3 class="main-box-title ">Fresh Topics</h3>
+    <h3 class="main-box-title ">Theo Dòng Sự Kiện</h3>
     <div class="main-box-inside ">
 
 

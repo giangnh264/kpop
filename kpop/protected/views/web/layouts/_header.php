@@ -6,7 +6,8 @@
     <title>Tin Tức âm nhạc Kpop</title>
 
     <?php
-    Yii::app()->getClientScript()->registerCssFile(Yii::app()->request->baseUrl."/web/css/theme.css?v=".time());
+    Yii::app()->getClientScript()->registerCssFile(Yii::app()->request->baseUrl."/web/css/theme.css");
+    Yii::app()->getClientScript()->registerCssFile(Yii::app()->request->baseUrl."/web/css/style.css");
     Yii::app()->getClientScript()->registerScriptFile(Yii::app()->request->baseUrl."/web/js/jquery-1.9.1.min.js");
     Yii::app()->getClientScript()->registerScriptFile(Yii::app()->request->baseUrl."/web/js/themes.js");
     ?>
