@@ -20,7 +20,7 @@ class VLinkPager extends CLinkPager {
 			$this->htmlOptions ['id'] = $this->getId ();
 		if (! isset ( $this->htmlOptions ['class'] ))
 			$this->htmlOptions ['class'] = 'yiiPager';
-		$this->pages->pageVar = 'trang-';
+		$this->pages->pageVar = 'p=';
 	}
 
 	protected function createPageButtons()
@@ -75,9 +75,8 @@ class VLinkPager extends CLinkPager {
 	{
 		$link="#";
         $link = Yii::app()->request->requestUri;
-        preg_match("/trang-(\w+)/", $link, $match);
+        preg_match("/p=(\w+)/", $link, $match);
         if($match){
-//            die('1');
             if(!empty($match[0])){
                 if ($pageNumber > 0) {
                     $p = $pageNumber+1;
@@ -92,9 +91,8 @@ class VLinkPager extends CLinkPager {
                 if(strpos($link,'?')!==false){
                     $link .="&p=".$p;
                 }else
-                    $link .="/trang-".$p;
+                    $link .="?p=".$p;
             }
-
         }
 
 		return $link;

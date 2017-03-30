@@ -1,3 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face
+{
+    font-family: "Roboto";
+    src: url( "../fonts/roboto/Roboto-Regular.ttf" ) /* EOT file for IE */;
+}@font-face
+{
+    font-family: "Roboto-Light";
+    src: url( "../fonts/roboto/Roboto-Light.ttf" ) /* EOT file for IE */;
+}
+@font-face
+{
+    font-family: "Roboto-Bold";
+    src: url( "../fonts/roboto/Roboto-Bold.ttf" ) /* EOT file for IE */;
+}
+body {
+    font-family: "Roboto","segoe ui",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
 body {
     background-color: #f0f0f0;
     font-family: "Roboto","segoe ui",Helvetica,Arial,sans-serif!important;
@@ -10203,7 +10227,7 @@ a:hover {
 
 .main-navigation a {
     display: block;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 20px;
     padding: 15px
 }
@@ -21445,4 +21469,11 @@ img.emoji {
     vertical-align: -0.1em !important;
     background: none !important;
     padding: 0 !important;
+}
+.vce-sid-left .vce-lay-c, .vce-sid-left .vce-lay-d, .vce-sid-left .vce-lay-e, .vce-sid-none .vce-lay-c, .vce-sid-none .vce-lay-d, .vce-sid-none .vce-lay-e, .vce-sid-none .vce-lay-h, .vce-sid-right .vce-lay-c, .vce-sid-right .vce-lay-d, .vce-sid-right .vce-lay-e {
+    margin: 0 20px 20px 0;
+}
+
+.vce-sid-left article.vce-lay-c:nth-of-type(2n), .vce-sid-left article.vce-lay-d:nth-of-type(2n), .vce-sid-left article.vce-lay-e:nth-of-type(5n), .vce-sid-none article.vce-lay-c:nth-of-type(3n), .vce-sid-none article.vce-lay-d:nth-of-type(3n), .vce-sid-none article.vce-lay-e:nth-of-type(7n), .vce-sid-right article.vce-lay-c:nth-of-type(2n), .vce-sid-right article.vce-lay-d:nth-of-type(2n), .vce-sid-right article.vce-lay-e:nth-of-type(5n) {
+    margin: 0 0 20px;
 }
