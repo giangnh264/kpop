@@ -1,40 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
 <head>
-    <meta charset="UTF-8">
+<!--    <meta charset="UTF-8">-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="<?php echo Yii::app()->language?>" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Tin Tức âm nhạc Kpop</title>
+    <title><?php echo Yii::t('web',$this->htmlTitle);?></title>
 
     <?php
-    Yii::app()->getClientScript()->registerCssFile(Yii::app()->request->baseUrl."/web/css/theme.css?v=".time());
-    Yii::app()->getClientScript()->registerScriptFile(Yii::app()->request->baseUrl."/web/js/jquery-1.9.1.min.js");
-    Yii::app()->getClientScript()->registerScriptFile(Yii::app()->request->baseUrl."/web/js/themes.js");
+        Yii::app()->getClientScript()->registerCssFile(Yii::app()->request->baseUrl."/web/css/theme.css?v=".time());
+        Yii::app()->getClientScript()->registerScriptFile(Yii::app()->request->baseUrl."/web/js/jquery-1.9.1.min.js");
+        Yii::app()->getClientScript()->registerScriptFile(Yii::app()->request->baseUrl."/web/js/themes.js");
     ?>
 
-
-    <!-- wpsso meta tags begin -->
-    <meta name="wpsso:mark:begin" content="wpsso meta tags begin"/>
-    <!-- generator:1 -->
-    <meta name="generator" content="WPSSO 3.40.1-2/G"/>
-    <link rel="shortlink" href="http://demo.mekshq.com/herald/"/>
-    <meta property="og:url" content="http://demo.mekshq.com/herald/"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:locale" content="en_US"/>
-    <meta property="og:site_name" content="Herald"/>
-    <meta property="og:title" content="Herald Home"/>
-    <meta property="og:description" content="Next Generation WordPress Magazine Theme"/>
-    <meta name="twitter:domain" content="demo.mekshq.com"/>
-    <meta name="twitter:title" content="Herald Home"/>
-    <meta name="twitter:description" content="Next Generation WordPress Magazine Theme"/>
-    <meta name="twitter:creator" content="https://twitter.com/mekshq"/>
-    <meta name="twitter:card" content="summary"/>
-    <meta itemprop="name" content="Herald Home"/>
-    <meta itemprop="description" content="Next Generation WordPress Magazine Theme"/>
-    <meta name="author" content="Patrick Callahan"/>
-    <meta name="description" content="Next Generation WordPress Magazine Theme"/>
-
-    <meta name="wpsso:mark:end" content="wpsso meta tags end"/>
-
+    <?php Yii::app()->SEO->renderMeta();?>
     <link rel="icon" href="http://demo.mekshq.com/herald/wp-content/uploads/2015/12/cropped-favicon_default-65x65.png"
           sizes="32x32"/>
     <link rel="icon" href="http://demo.mekshq.com/herald/wp-content/uploads/2015/12/cropped-favicon_default-300x300.png"

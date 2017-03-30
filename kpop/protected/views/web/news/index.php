@@ -1,3 +1,43 @@
+<?php
+$homeEmbedUrl =  "http://".$_SERVER['SERVER_NAME'];
+$url = $homeEmbedUrl.Yii::app()->createUrl("news/index", array('id'=>$news->id, 'url_key'=>Common::makeFriendlyUrl($news->title)));
+$image =  Yii::app()->params['storage']['NewsUrl'] . $news->url_img;
+
+$title = $news->title;
+$description = $news->description;
+Yii::app()->SEO->setMetaTitle($title);
+Yii::app()->SEO->setMetaDescription($news->description);
+Yii::app()->SEO->setMetaKeyword($title);
+Yii::app()->SEO->setCanonical($url);
+Yii::app()->SEO->addMetaProp('og:url',$url);
+Yii::app()->SEO->addMetaProp('og:title',$title);
+Yii::app()->SEO->addMetaProp('og:description',$description);
+Yii::app()->SEO->addMetaProp('og:type',"music.song");
+Yii::app()->SEO->addMetaProp('og:image',$image);
+Yii::app()->SEO->addMetaProp('og:image:width','600');
+Yii::app()->SEO->addMetaProp('og:image:height','600');
+Yii::app()->SEO->addMetaProp('og:site_name',Yii::app()->name);
+Yii::app()->SEO->addMetaProp('og:updated_time',time());
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="herald-section container">
     <article id="post-171"
              class="herald-single post-171 post type-post status-publish format-standard has-post-thumbnail hentry category-entertainment tag-blog tag-music-2 tag-studio">

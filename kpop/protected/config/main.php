@@ -60,7 +60,11 @@ return CMap::mergeArray(
         // application-level parameters that can be accessed
         // using Yii::app()->params['paramName']
         'params' => array(
-
+            'htmlMetadata'=>array(
+                'title'=>'Tin Tức âm nhạc Kpop',
+                'description'=>'Thế Giới Kpop - Thông tin đầy đủ về các Kpop Idol MỚI NHẤT',
+                'keywords'=>'Thế Giới Kpop - Thông tin đầy đủ về các Kpop Idol MỚI NHẤT - BTS - EXO - TWICE - BIGBANG - SNSD',
+            ),
             'cacheTime' => 600,
             // this is used to support multi lanuages
             'languages' => array('en_us' => 'English', 'vi_vn' => 'Tiếng Việt'),

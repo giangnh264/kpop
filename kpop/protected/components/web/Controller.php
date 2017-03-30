@@ -29,7 +29,7 @@ class Controller extends CController {
 
     public function actionError(){}
 
-    public function  render($view, $data = null, $return = false) {
+    public function render($view, $data = null, $return = false) {
 
     	$this->htmlKeyword = Yii::app()->params['htmlMetadata']['keywords'];
     	if($this->htmlTitle){
