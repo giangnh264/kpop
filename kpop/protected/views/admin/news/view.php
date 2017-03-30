@@ -21,7 +21,7 @@ $this->pageLabel = Yii::t('admin', "Thông tin News")."#".$model->id;
 	'attributes'=>array(
 		'id',
 		'title',
-		'intro',
+		'description',
 		'avatar',
 		'url',
 		'related_artists',

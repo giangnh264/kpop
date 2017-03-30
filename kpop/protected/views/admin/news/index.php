@@ -107,14 +107,14 @@ $this->widget('application.widgets.admin.grid.CGridView', array(
           'sorder',
           'status',
          */
-        array(
+        /*array(
             'header' => Yii::t('admin', 'Sắp xếp') . CHtml::link(CHtml::image(Yii::app()->request->baseUrl . "/css/img/save_icon.png"), "", array("class" => "reorder", "rel" => $this->createUrl('news/reorder'))),
             'value' => 'CHtml::textField("sorder[$data->id]", $data->sorder,array("size"=>1))',
             'type' => 'raw',
             'htmlOptions' => array(),
             'headerHtmlOptions' => array('width' => '62px', 'style' => 'text-align:left'),
-        ),
-        array(
+        ),*/
+        /*array(
                     'class'=>'CLinkColumn',
                     'header'=>'Hot',
                     'labelExpression'=>'($data->featured==1)?CHtml::image(Yii::app()->request->baseUrl."/css/img/publish.png"):CHtml::image(Yii::app()->request->baseUrl."/css/img/unpublish.png")',
@@ -122,7 +122,7 @@ $this->widget('application.widgets.admin.grid.CGridView', array(
                     'linkHtmlOptions'=>array(
                                         ),
 
-                ),    
+                ),  */
         array(
             'class' => 'CButtonColumn',
             'header' => CHtml::dropDownList('pageSize', $pageSize, array(10 => 10, 30 => 30, 50 => 50, 100 => 100), array(

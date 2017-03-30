@@ -25,14 +25,14 @@ class AdminNewsModel extends NewsModel
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('title',$this->title,true);
-		$criteria->compare('intro',$this->intro,true);
+		$criteria->compare('description',$this->description,true);
 		$criteria->compare('content',$this->content,true);
-		$criteria->compare('avatar',$this->avatar,true);
-		$criteria->compare('url',$this->url,true);
-		$criteria->compare('related_artists',$this->related_artists,true);
-		$criteria->compare('created_by',$this->created_by);
+//		$criteria->compare('avatar',$this->avatar,true);
+//		$criteria->compare('url',$this->url,true);
+//		$criteria->compare('related_artists',$this->related_artists,true);
+//		$criteria->compare('created_by',$this->created_by);
 		$criteria->compare('created_time',$this->created_time,true);
-		$criteria->compare('sorder',$this->sorder);
+//		$criteria->compare('sorder',$this->sorder);
 		$criteria->compare('status',$this->status);
 
 		return new CActiveDataProvider($this, array(

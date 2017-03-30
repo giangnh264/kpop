@@ -34,5 +34,10 @@ class NewsModel extends BaseNewsModel
         );
     }
 
+    public function getAvatarUrl($id=null, $size="150")
+    {
+        return Yii::app()->params['storage']['NewsUrl'] . $this->url_img;
+    }
+
 
 }

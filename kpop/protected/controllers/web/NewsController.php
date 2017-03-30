@@ -13,6 +13,8 @@ class NewsController extends Controller
         $limit = 10;
         $offset = 0;
 
+        $this->htmlTitle = $news->title;
+
         $news_relate = WebNewsModel::model()->getNewsByTag($news, $limit, $offset);
 
         $this->render('index', compact('news', 'news_relate'));

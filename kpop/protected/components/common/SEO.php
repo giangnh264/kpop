@@ -12,7 +12,7 @@ class SEO extends CApplicationComponent
     {
         $value = strip_tags($value);
         $value = CHtml::encode($value);
-        $this->metaTitle = $value.' | AMUSIC.VN';
+        $this->metaTitle = $value.' | KPOP.VN';
     }
     public function setMetaDescription($value)
     {
@@ -38,13 +38,13 @@ class SEO extends CApplicationComponent
         $value = CHtml::encode($value);
         if($name=='og:title'){
             if($value!=''){
-                $value.=" | AMUSIC.VN";
+                $value.=" | KPOP.VN";
             }else{
-                $value="AMUSIC.VN";
+                $value="KPOP.VN";
             }
         }elseif($name=='og:site_name')
         {
-            $value="AMUSIC.VN";
+            $value="KPOP.VN";
         }elseif($name=='og:updated_time')
         {
             $value = date('Y-m-d H:i:s', $value);

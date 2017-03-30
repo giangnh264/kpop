@@ -53,9 +53,9 @@
         </div>
 
         <div class="row">
-            <?php echo $form->labelEx($model, 'intro'); ?>
-            <?php echo $form->textArea($model, 'intro', array('cols' => 60, 'rows' => 8)); ?>
-            <?php echo $form->error($model, 'intro'); ?>
+            <?php echo $form->labelEx($model, 'description'); ?>
+            <?php echo $form->textArea($model, 'description', array('cols' => 60, 'rows' => 8)); ?>
+            <?php echo $form->error($model, 'description'); ?>
         </div>
 
         <div class="row">
@@ -106,11 +106,7 @@
             <?php echo $form->error($model, 'intro'); ?>
         </div>
 
-        <div class="row">
-            <?php echo $form->labelEx($model, 'related_artists'); ?>
-            <?php echo $form->textField($model, 'related_artists', array('size' => 60, 'maxlength' => 255)); ?>
-            <?php echo $form->error($model, 'related_artists'); ?>
-        </div>
+
 
         <div class="row">
             <?php echo $form->labelEx($model, 'status'); ?>
